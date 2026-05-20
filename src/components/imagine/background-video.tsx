@@ -1,12 +1,12 @@
 export function PageBackdrop() {
   return (
     <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
-      {/* Ellipse-15 glow — positioned upper-right per Figma (center at 50%+257.5, 50%-439.5) */}
+      {/* Ellipse-15 glow — centered on the prompt box, bleeding outward behind it */}
       <div
         className="ellipse-drift absolute z-[1]"
         style={{
-          left: "calc(50% + 257.5px)",
-          top: "calc(50% - 439.5px)",
+          left: "50%",
+          top: "50%",
           width: "515px",
           height: "515px",
         }}

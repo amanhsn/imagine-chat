@@ -2,3 +2,5 @@
 [     266ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/0qqy_next_dist_0xm.zuy._.js:2477
 [  114601ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/0qqy_next_dist_0xm.zuy._.js:2477
 [  114609ms] [LOG] [Fast Refresh] done in 95ms @ http://localhost:3000/_next/static/chunks/0qqy_next_dist_0xm.zuy._.js:2477
+[  858604ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/0qqy_next_dist_0xm.zuy._.js:2477
+[  858911ms] [LOG] [Fast Refresh] done in 76ms @ http://localhost:3000/_next/static/chunks/0qqy_next_dist_0xm.zuy._.js:2477
