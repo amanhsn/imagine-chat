@@ -1,7 +1,20 @@
+"use client";
+
+import { FlickeringGrid } from "@/components/ui/flickering-grid-hero";
+
 export function PageBackdrop() {
   return (
     <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
-      {/* Ellipse-15 glow — centered on the prompt box, bleeding outward behind it */}
+      {/* Animated flickering grid — full-bleed, faded toward edges */}
+      <FlickeringGrid
+        className="absolute inset-0 z-[2] [mask-image:radial-gradient(ellipse_70%_60%_at_50%_60%,#000_35%,transparent_100%)]"
+        color="#F28B82"
+        maxOpacity={0.12}
+        flickerChance={0.08}
+        squareSize={2}
+        gridGap={12}
+      />
+      {/* Ellipse-15 glow — centered, bleeding out behind the prompt box */}
       <div
         className="ellipse-drift absolute z-[1]"
         style={{
@@ -21,21 +34,6 @@ export function PageBackdrop() {
           }}
         />
       </div>
-      {/* Subtle dot pattern (Figma 1372x959, opacity 0.3) */}
-      <div
-        className="absolute z-[2] opacity-30"
-        style={{
-          left: "calc(50% + 34px)",
-          top: "calc(50% + 32.5px)",
-          width: "1372px",
-          height: "959px",
-          transform: "translate(-50%, -50%)",
-          backgroundImage: "url('/assets/hero-bg.png')",
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "bottom",
-          backgroundSize: "cover",
-        }}
-      />
     </div>
   );
 }
