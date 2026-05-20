@@ -1,26 +1,144 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Imagine design tokens — dark theme is the only theme */
+  --colors-background: #0f0f0f;
+  --colors-fill-primary-variant: #171717;
+  --colors-fill-secondary: #212121;
+  --colors-fill-secondary-disabled: rgba(33, 33, 33, 0.3);
+  --colors-fill-brand: #8a3ffc;
+  --colors-fill-brand-hover: #a56eff;
+  --colors-fill-brand-secondary: rgba(105, 41, 196, 0.3);
+  --colors-border-primary: #212121;
+  --colors-border-secondary: #2e2e2e;
+  --colors-border-brand-hover: #a56eff;
+  --colors-content-primary: #ffffff;
+  --colors-content-primary-disabled: rgba(255, 255, 255, 0.3);
+  --colors-content-secondary: #bdbdbd;
+  --colors-content-tertiary: rgba(255, 255, 255, 0.5);
+
+  --font-hero: var(--font-matrix-display), "Matrixtype Display",
+    "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-ui: "Google Sans", "Google Sans Text", "Google Sans Flex",
+    var(--font-matrix-body), system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-bg: var(--colors-background);
+  --color-fill-primary-variant: var(--colors-fill-primary-variant);
+  --color-fill-secondary: var(--colors-fill-secondary);
+  --color-fill-secondary-disabled: var(--colors-fill-secondary-disabled);
+  --color-fill-brand: var(--colors-fill-brand);
+  --color-fill-brand-hover: var(--colors-fill-brand-hover);
+  --color-fill-brand-secondary: var(--colors-fill-brand-secondary);
+  --color-border-primary: var(--colors-border-primary);
+  --color-border-secondary: var(--colors-border-secondary);
+  --color-border-brand-hover: var(--colors-border-brand-hover);
+  --color-content-primary: var(--colors-content-primary);
+  --color-content-primary-disabled: var(--colors-content-primary-disabled);
+  --color-content-secondary: var(--colors-content-secondary);
+  --color-content-tertiary: var(--colors-content-tertiary);
+
+  --font-hero: var(--font-hero);
+  --font-ui: var(--font-ui);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+html,
+body {
+  background: var(--colors-background);
+  color: var(--colors-content-primary);
+  font-family:
+    "Google Sans", "Google Sans Text", "Google Sans Flex", system-ui,
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-hero {
+  font-family:
+    var(--font-matrix-display), "Matrixtype Display", "Helvetica Neue",
+    Helvetica, Arial, sans-serif;
+}
+
+/* Subtle drift + breath on the radial glow */
+@keyframes glow-drift {
+  0% {
+    transform: translate(-50%, -50%) translate(0px, 0px) scale(1);
+    opacity: 0.95;
+  }
+  25% {
+    transform: translate(-50%, -50%) translate(8px, -4px) scale(1.03);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-50%, -50%) translate(-4px, 6px) scale(0.985);
+    opacity: 0.9;
+  }
+  75% {
+    transform: translate(-50%, -50%) translate(6px, 2px) scale(1.02);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) translate(0px, 0px) scale(1);
+    opacity: 0.95;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.ellipse-drift {
+  animation: glow-drift 16s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ellipse-drift {
+    animation: none;
+  }
+}
+
+/* Typewriter caret */
+@keyframes caret-blink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.typewriter-caret {
+  display: inline-block;
+  width: 0.6ch;
+  margin-left: 2px;
+  background: currentColor;
+  animation: caret-blink 1s steps(2) infinite;
+}
+
+/* Shimmer animation for the prompt placeholder text */
+@keyframes shimmer-x {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.txt-shimmer {
+  background: linear-gradient(
+    90deg,
+    rgb(123, 123, 123) 0%,
+    rgb(123, 123, 123) 35%,
+    rgb(238, 238, 238) 50%,
+    rgb(123, 123, 123) 65%,
+    rgb(123, 123, 123) 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer-x 4s linear infinite;
 }

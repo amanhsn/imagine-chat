@@ -1,0 +1,10 @@
+- generic [active] [ref=e1]:
+  - main [ref=e4]:
+    - heading "Build something pixel-perfect." [level=1] [ref=e5]
+    - paragraph [ref=e6]: A flickering grid background that fills the entire viewport — no masks, no logo cutouts, just a soft, ambient field.
+    - generic [ref=e7]:
+      - link "Get started" [ref=e8] [cursor=pointer]:
+        - /url: "#"
+      - link "Learn more" [ref=e9] [cursor=pointer]:
+        - /url: "#"
+  - alert [ref=e10]
