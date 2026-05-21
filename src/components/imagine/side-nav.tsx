@@ -27,7 +27,7 @@ function IconButton({
 
 export function SideNav() {
   return (
-    <aside className="flex h-[1024px] shrink-0 flex-col items-start gap-0 border-r border-[var(--colors-border-primary)] bg-[var(--colors-background)] p-[12px]">
+    <aside className="hidden min-h-screen shrink-0 flex-col items-start gap-0 self-stretch border-r border-[var(--colors-border-primary)] bg-[var(--colors-background)] p-[12px] sm:flex">
       <div className="flex flex-1 flex-col items-center justify-between">
         <div className="flex flex-col items-center gap-[12px]">
           <div className="flex size-10 items-center justify-center p-[8px]">

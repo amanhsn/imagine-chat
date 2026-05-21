@@ -10,3 +10,19 @@
 [   32771ms] [LOG] [Fast Refresh] done in 115ms @ http://localhost:3000/_next/static/chunks/0qqy_next_dist_0xm.zuy._.js:2477
 [   34768ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/0qqy_next_dist_0xm.zuy._.js:2477
 [   35004ms] [LOG] [Fast Refresh] done in 336ms @ http://localhost:3000/_next/static/chunks/0qqy_next_dist_0xm.zuy._.js:2477
+[ 4658344ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/0qqy_next_dist_0xm.zuy._.js:2477
+[ 4659240ms] [LOG] [Fast Refresh] done in 1018ms @ http://localhost:3000/_next/static/chunks/0qqy_next_dist_0xm.zuy._.js:2477
+[ 4667488ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/0qqy_next_dist_0xm.zuy._.js:2477
+[ 4669183ms] [LOG] [Fast Refresh] done in 1713ms @ http://localhost:3000/_next/static/chunks/0qqy_next_dist_0xm.zuy._.js:2477
+[ 4669456ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/0qqy_next_dist_0xm.zuy._.js:2477
+[ 4671272ms] [LOG] [Fast Refresh] done in 1919ms @ http://localhost:3000/_next/static/chunks/0qqy_next_dist_0xm.zuy._.js:2477
+[ 4674396ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/0qqy_next_dist_0xm.zuy._.js:2477
+[ 4674869ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/0qqy_next_dist_0xm.zuy._.js:2477
+[ 4676604ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/0qqy_next_dist_0xm.zuy._.js:2477
+[ 4676819ms] [LOG] [Fast Refresh] done in 316ms @ http://localhost:3000/_next/static/chunks/0qqy_next_dist_0xm.zuy._.js:2477
+[ 4677771ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/0qqy_next_dist_0xm.zuy._.js:2477
+[ 4678052ms] [LOG] [Fast Refresh] done in 236ms @ http://localhost:3000/_next/static/chunks/0qqy_next_dist_0xm.zuy._.js:2477
+[ 4678184ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/0qqy_next_dist_0xm.zuy._.js:2477
+[ 4678363ms] [LOG] [Fast Refresh] done in 291ms @ http://localhost:3000/_next/static/chunks/0qqy_next_dist_0xm.zuy._.js:2477
+[ 4685458ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/0qqy_next_dist_0xm.zuy._.js:2477
+[ 4685567ms] [LOG] [Fast Refresh] done in 179ms @ http://localhost:3000/_next/static/chunks/0qqy_next_dist_0xm.zuy._.js:2477

@@ -37,7 +37,7 @@ function Tab({
   return (
     <button
       type="button"
-      className={`flex cursor-pointer items-center gap-[6px] rounded-[12px] px-3 py-[6px] text-[14px] font-medium leading-5 tracking-[0.42px] transition-colors ${
+      className={`flex shrink-0 cursor-pointer items-center gap-[6px] rounded-[12px] px-3 py-[6px] text-[14px] font-medium leading-5 tracking-[0.42px] transition-colors ${
         active
           ? "bg-[var(--colors-fill-secondary)] text-[var(--colors-content-primary)]"
           : "border border-[var(--colors-border-secondary)] text-[var(--colors-content-secondary)] hover:bg-[var(--colors-fill-secondary)]"
@@ -51,11 +51,11 @@ function Tab({
 export function Hero() {
   return (
     <main className="flex w-full flex-1 flex-col items-center px-4 pb-8 pt-2">
-      <div className="flex w-full flex-1 flex-col items-center justify-center py-6">
-        <div className="flex flex-col items-center gap-8">
+      <div className="flex w-full max-w-[760px] flex-1 flex-col items-center justify-center py-6">
+        <div className="flex w-full flex-col items-center gap-6 sm:gap-8">
           {/* Greeting */}
-          <div className="flex w-full items-center justify-center gap-4">
-            <div className="relative h-[128px] w-[112px] shrink-0 overflow-hidden">
+          <div className="flex w-full flex-col items-center justify-center gap-2 sm:flex-row sm:gap-4">
+            <div className="relative h-[96px] w-[84px] shrink-0 overflow-hidden sm:h-[128px] sm:w-[112px]">
               <video
                 autoPlay
                 loop
@@ -72,12 +72,12 @@ export function Hero() {
           </div>
 
           {/* Prompt + filters/presets */}
-          <div className="flex w-[760px] flex-col items-start gap-4">
+          <div className="flex w-full flex-col items-start gap-4">
             {/* Prompt box */}
             <div className="flex w-full flex-col items-start overflow-hidden rounded-[20px] border border-[var(--colors-border-primary)] bg-[var(--colors-fill-primary-variant)] px-4 py-3 shadow-[0px_4px_8px_0px_rgba(0,0,0,0.2)]">
               <div className="flex w-full flex-col items-start gap-4">
                 <div className="flex w-full items-center overflow-hidden py-1 pr-3">
-                  <p className="txt-shimmer whitespace-nowrap text-[14px] leading-5 tracking-[0.28px]">
+                  <p className="txt-shimmer text-[14px] leading-5 tracking-[0.28px] sm:whitespace-nowrap">
                     Create an image with subtle parallax, slow Ken Burns drift
                     on background
                   </p>
@@ -156,7 +156,7 @@ export function Hero() {
 
             {/* Tabs + presets */}
             <div className="flex w-full flex-col items-start gap-4">
-              <div className="flex items-start gap-2 px-3">
+              <div className="-mx-4 flex w-[calc(100%+2rem)] items-start gap-2 overflow-x-auto px-4 sm:mx-0 sm:w-full sm:overflow-visible sm:px-3 [&::-webkit-scrollbar]:hidden">
                 <Tab active>Featured</Tab>
                 <Tab>Viral Video Formats</Tab>
                 <Tab>Video Special Effects</Tab>

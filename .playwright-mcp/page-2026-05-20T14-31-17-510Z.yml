@@ -1,0 +1,85 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - complementary [ref=e3]:
+      - generic [ref=e4]:
+        - generic [ref=e5]:
+          - img "Imagine" [ref=e7]
+          - generic [ref=e9]:
+            - button [ref=e10] [cursor=pointer]:
+              - img [ref=e11]
+            - button [ref=e12] [cursor=pointer]:
+              - img [ref=e13]
+        - generic [ref=e16]:
+          - button [ref=e17] [cursor=pointer]:
+            - img [ref=e18]
+          - button [ref=e20] [cursor=pointer]:
+            - img [ref=e21]
+    - generic [ref=e24]:
+      - banner [ref=e25]:
+        - generic [ref=e26]:
+          - button "All creations" [disabled] [ref=e27]:
+            - generic [ref=e28]:
+              - generic [ref=e29]:
+                - img [ref=e30]
+                - generic [ref=e33]: All creations
+              - img [ref=e34]
+          - paragraph [ref=e38]: Untitled Chat
+        - generic [ref=e39]:
+          - generic [ref=e40]:
+            - button [ref=e41] [cursor=pointer]:
+              - img [ref=e42]
+            - button "Upgrade" [ref=e45] [cursor=pointer]:
+              - generic [ref=e46]:
+                - img [ref=e47]
+                - generic [ref=e50]: Upgrade
+            - button "Personal" [ref=e51] [cursor=pointer]:
+              - generic [ref=e52]:
+                - generic [ref=e55]: Personal
+                - img [ref=e56]
+          - generic [ref=e58]:
+            - button [ref=e59] [cursor=pointer]:
+              - img [ref=e60]
+            - button [ref=e62] [cursor=pointer]:
+              - img [ref=e64]
+            - img "User avatar" [ref=e69]
+      - main [ref=e71]:
+        - generic [ref=e73]:
+          - generic [ref=e77]:
+            - heading "Hello, Saa" [level=1] [ref=e79]
+            - heading [level=2] [ref=e81]
+          - generic [ref=e82]:
+            - generic [ref=e84]:
+              - paragraph [ref=e86]: Create an image with subtle parallax, slow Ken Burns drift on background
+              - generic [ref=e87]:
+                - generic [ref=e88]:
+                  - generic [ref=e89]:
+                    - button [ref=e90] [cursor=pointer]:
+                      - img [ref=e91]
+                    - button "Claude" [ref=e92] [cursor=pointer]:
+                      - generic [ref=e93]:
+                        - generic [ref=e95]: Claude
+                        - img [ref=e96]
+                  - button "Ask run" [ref=e98] [cursor=pointer]:
+                    - generic [ref=e99]:
+                      - generic [ref=e100]: Ask run
+                      - img [ref=e101]
+                - button [ref=e103] [cursor=pointer]:
+                  - img [ref=e104]
+            - generic [ref=e106]:
+              - generic [ref=e107]:
+                - button "Featured" [ref=e108] [cursor=pointer]
+                - button "Viral Video Formats" [ref=e109] [cursor=pointer]
+                - button "Video Special Effects" [ref=e110] [cursor=pointer]
+              - generic [ref=e111]:
+                - button "Design autumn forest with falling leaves" [ref=e112] [cursor=pointer]:
+                  - img [ref=e114]
+                  - generic [ref=e117]: Design autumn forest with falling leaves
+                - button "Sketch mountain landscape at sunrise" [ref=e118] [cursor=pointer]:
+                  - img [ref=e120]
+                  - generic [ref=e123]: Sketch mountain landscape at sunrise
+                - button "Create abstract cityscape with neon lights" [ref=e124] [cursor=pointer]:
+                  - img [ref=e126]
+                  - generic [ref=e129]: Create abstract cityscape with neon lights
+  - button "Open Next.js Dev Tools" [ref=e135] [cursor=pointer]:
+    - img [ref=e136]
+  - alert [ref=e139]

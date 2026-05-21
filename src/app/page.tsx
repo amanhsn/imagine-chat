@@ -7,7 +7,7 @@ export default function Page() {
   return (
     <div className="relative isolate flex min-h-screen w-full items-start bg-[var(--colors-background)]">
       <SideNav />
-      <div className="relative z-[3] flex h-[1024px] min-w-0 flex-1 flex-col items-start">
+      <div className="relative z-[3] flex min-h-screen min-w-0 flex-1 flex-col items-start">
         <TopNav />
         <div className="relative flex w-full flex-1 flex-col items-center">
           <Hero />

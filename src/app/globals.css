@@ -39,6 +39,7 @@
   --color-content-primary-disabled: var(--colors-content-primary-disabled);
   --color-content-secondary: var(--colors-content-secondary);
   --color-content-tertiary: var(--colors-content-tertiary);
+  --color-primary: var(--colors-fill-brand);
 
   --font-hero: var(--font-hero);
   --font-ui: var(--font-ui);
@@ -141,4 +142,151 @@ body {
   background-clip: text;
   color: transparent;
   animation: shimmer-x 4s linear infinite;
+}
+
+/* ---------------------------------------------------------------
+   Generating Scene — loader for the video preview canvas.
+   Two organic blob masks clip a flickering pixel-grid texture and
+   sit atop slow-breathing brand-tinted glows. A diagonal shimmer
+   sweeps across the frame, the spinner rotates, and the label
+   pulses with the global txt-shimmer.
+   --------------------------------------------------------------- */
+
+@keyframes scene-glow-breathe {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.04);
+  }
+}
+
+@keyframes scene-glow-breathe-late {
+  0%,
+  100% {
+    opacity: 0.45;
+    transform: scale(1.02);
+  }
+  50% {
+    opacity: 0.75;
+    transform: scale(0.98);
+  }
+}
+
+@keyframes scene-scan {
+  0% {
+    transform: translateY(-30%);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.6;
+  }
+  80% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(120%);
+    opacity: 0;
+  }
+}
+
+@keyframes scene-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.scene-loader-mask {
+  /* Two organic blob masks clip the flickering pixel grid into the
+     top + bottom blob shapes shown in the Figma. The center stays
+     open so the spinner + label have breathing room. */
+  -webkit-mask-image:
+    radial-gradient(
+      ellipse 36% 30% at 32% 28%,
+      #000 50%,
+      transparent 100%
+    ),
+    radial-gradient(
+      ellipse 34% 28% at 68% 74%,
+      #000 50%,
+      transparent 100%
+    );
+  mask-image:
+    radial-gradient(
+      ellipse 36% 30% at 32% 28%,
+      #000 50%,
+      transparent 100%
+    ),
+    radial-gradient(
+      ellipse 34% 28% at 68% 74%,
+      #000 50%,
+      transparent 100%
+    );
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-composite: source-over;
+  mask-composite: add;
+}
+
+.scene-loader-glow-a {
+  background: radial-gradient(
+    ellipse 55% 45% at 35% 32%,
+    rgba(138, 63, 252, 0.28),
+    transparent 70%
+  );
+  transform-origin: 35% 32%;
+  animation: scene-glow-breathe 9s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+.scene-loader-glow-b {
+  background: radial-gradient(
+    ellipse 50% 42% at 64% 70%,
+    rgba(165, 110, 255, 0.2),
+    transparent 70%
+  );
+  transform-origin: 64% 70%;
+  animation: scene-glow-breathe-late 11s ease-in-out infinite -4s;
+  will-change: transform, opacity;
+}
+
+.scene-loader-scan {
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.04) 40%,
+    rgba(255, 255, 255, 0.08) 50%,
+    rgba(255, 255, 255, 0.04) 60%,
+    transparent 100%
+  );
+  height: 60%;
+  animation: scene-scan 6s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+  mix-blend-mode: plus-lighter;
+  will-change: transform, opacity;
+}
+
+.scene-loader-vignette {
+  box-shadow:
+    inset 0 0 120px 24px rgba(0, 0, 0, 0.45),
+    inset 0 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.scene-loader-spinner {
+  animation: scene-spin 0.9s linear infinite;
+  transform-origin: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scene-loader-mask,
+  .scene-loader-glow-a,
+  .scene-loader-glow-b,
+  .scene-loader-scan {
+    animation: none;
+  }
+  .scene-loader-spinner {
+    animation-duration: 3s;
+  }
 }

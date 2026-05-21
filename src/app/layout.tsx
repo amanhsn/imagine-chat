@@ -28,6 +28,18 @@ const matrixBody = localFont({
   display: "swap",
 });
 
+const pixeloidSans = localFont({
+  src: [
+    {
+      path: "./fonts/PixeloidSans-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+  ],
+  variable: "--font-pixeloid",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: "Imagine — Untitled Chat",
   description: "Imagine web editor",
@@ -41,7 +53,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${matrixDisplay.variable} ${matrixBody.variable} h-full antialiased`}
+      className={`${matrixDisplay.variable} ${matrixBody.variable} ${pixeloidSans.variable} h-full antialiased`}
     >
       <body className="min-h-full bg-[var(--colors-background)] text-[var(--colors-content-primary)]">
         {children}

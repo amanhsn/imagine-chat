@@ -124,9 +124,9 @@ export function TypewriterHero() {
     phase === "erasing";
 
   return (
-    <div className="flex min-w-0 flex-1 flex-col items-start justify-center gap-2">
-      <div className="flex w-full items-center justify-center pl-2">
-        <h1 className="font-hero flex-1 text-[32px] font-normal leading-10 tracking-[-2.56px] text-[var(--colors-content-primary)]">
+    <div className="flex min-w-0 flex-1 flex-col items-center justify-center gap-2 sm:items-start">
+      <div className="flex w-full items-center justify-center sm:pl-2">
+        <h1 className="font-hero flex-1 text-center text-[24px] font-normal leading-8 tracking-[-1.5px] text-[var(--colors-content-primary)] sm:text-left sm:text-[32px] sm:leading-10 sm:tracking-[-2.56px]">
           <span>{greeting}</span>
           {showGreetingCaret && (
             <span className="typewriter-caret" aria-hidden="true" />
@@ -134,8 +134,8 @@ export function TypewriterHero() {
           {greeting === "" && <span className="opacity-0">&nbsp;</span>}
         </h1>
       </div>
-      <div className="flex w-full items-center justify-center pl-2">
-        <h2 className="font-hero flex-1 text-[32px] font-normal leading-10 tracking-[-2.56px] text-[var(--colors-content-primary)]">
+      <div className="flex w-full items-center justify-center sm:pl-2">
+        <h2 className="font-hero flex-1 text-center text-[24px] font-normal leading-8 tracking-[-1.5px] text-[var(--colors-content-primary)] sm:text-left sm:text-[32px] sm:leading-10 sm:tracking-[-2.56px]">
           <span>{prompt}</span>
           {showPromptCaret && (
             <span className="typewriter-caret" aria-hidden="true" />
