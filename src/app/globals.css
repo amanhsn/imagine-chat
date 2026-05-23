@@ -290,3 +290,137 @@ body {
     animation-duration: 3s;
   }
 }
+
+/* ---------------------------------------------------------------
+   Onboarding animations.
+   --------------------------------------------------------------- */
+
+/* Orbital rings in the HERMES step. The ring container rotates;
+   each badge inside counter-rotates to stay upright. */
+@keyframes orbit-cw {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes orbit-ccw {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+.orbit-ring {
+  animation: orbit-cw linear infinite;
+  transform-origin: center;
+  will-change: transform;
+}
+.orbit-ring-reverse {
+  animation: orbit-ccw linear infinite;
+  transform-origin: center;
+  will-change: transform;
+}
+.orbit-counter {
+  animation: orbit-ccw linear infinite;
+  transform-origin: center;
+  will-change: transform;
+}
+.orbit-counter-reverse {
+  animation: orbit-cw linear infinite;
+  transform-origin: center;
+  will-change: transform;
+}
+
+/* Soft outer glow that breathes on the HERMES portrait disc. */
+@keyframes aura-breathe {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.95;
+    transform: scale(1.06);
+  }
+}
+.aura-breathe {
+  animation: aura-breathe 8s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+/* Slow rotation behind the HERMES sigil. */
+@keyframes sigil-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.sigil-spin {
+  animation: sigil-spin 45s linear infinite;
+  transform-origin: center;
+  will-change: transform;
+}
+
+/* Music bar visualizer in the create step and use-case card 3. */
+@keyframes bar-pulse {
+  0%,
+  100% {
+    transform: scaleY(0.3);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+.bar-pulse {
+  transform-origin: bottom center;
+  animation: bar-pulse 1.4s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* Image scan-reveal in the create step. */
+@keyframes scan-reveal {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.9;
+  }
+  80% {
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+.scan-reveal {
+  animation: scan-reveal 4.5s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+  will-change: transform, opacity;
+}
+
+/* Gentle floating drift for memory cards and connector nodes. */
+@keyframes float-drift {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, -6px);
+  }
+}
+.float-drift {
+  animation: float-drift 5s ease-in-out infinite;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .orbit-ring,
+  .orbit-ring-reverse,
+  .orbit-counter,
+  .orbit-counter-reverse,
+  .aura-breathe,
+  .sigil-spin,
+  .bar-pulse,
+  .scan-reveal,
+  .float-drift {
+    animation: none;
+  }
+}

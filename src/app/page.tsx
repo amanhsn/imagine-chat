@@ -2,6 +2,7 @@ import { SideNav } from "@/components/imagine/side-nav";
 import { TopNav } from "@/components/imagine/top-nav";
 import { Hero } from "@/components/imagine/hero";
 import { PageBackdrop } from "@/components/imagine/background-video";
+import { OnboardingOverlay } from "@/components/imagine/onboarding/onboarding-overlay";
 
 export default function Page() {
   return (
@@ -14,6 +15,7 @@ export default function Page() {
         </div>
       </div>
       <PageBackdrop />
+      <OnboardingOverlay />
     </div>
   );
 }
