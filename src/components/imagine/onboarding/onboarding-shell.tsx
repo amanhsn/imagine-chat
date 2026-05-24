@@ -45,8 +45,8 @@ export function OnboardingShell({
       ) : (
         <>
           {/* Top bar */}
-          <header className="relative z-[20] flex shrink-0 items-center justify-between px-5 pt-4">
-            <div className="flex items-center gap-2">
+          <header className="relative z-[20] flex shrink-0 items-center justify-between px-3 pt-3 sm:px-5 sm:pt-4">
+            <div className="flex items-center gap-1.5 sm:gap-2">
               <span className="flex size-5 items-center justify-center">
                 <Image
                   src="/assets/logo-imagine.svg"
@@ -63,7 +63,7 @@ export function OnboardingShell({
                 Imagine
               </span>
               <span
-                className="text-[13px] leading-none text-[var(--colors-content-tertiary)]"
+                className="hidden text-[13px] leading-none text-[var(--colors-content-tertiary)] sm:inline"
                 style={{ fontFamily: "var(--font-ui)" }}
               >
                 Personal computer
@@ -85,14 +85,14 @@ export function OnboardingShell({
           </header>
 
           {/* Scene viewport */}
-          <main className="relative z-[10] flex min-h-0 w-full flex-1 items-center justify-center overflow-hidden px-6 pt-4">
+          <main className="relative z-[10] flex min-h-0 w-full flex-1 items-center justify-center overflow-hidden px-3 pt-3 sm:px-6 sm:pt-4">
             <div className="mx-auto flex h-full w-full max-w-[1120px] items-center justify-center">
               {children}
             </div>
           </main>
 
           {/* Caption + CTA */}
-          <div className="relative z-[10] flex shrink-0 flex-col items-center gap-4 px-6 pb-6 pt-2">
+          <div className="relative z-[10] flex shrink-0 flex-col items-center gap-3 px-4 pb-4 pt-2 sm:gap-4 sm:px-6 sm:pb-6">
             <motion.div
               key={`${scene}-caption`}
               initial={{ opacity: 0, y: 8 }}
@@ -102,16 +102,16 @@ export function OnboardingShell({
                 ease: [0.22, 1, 0.36, 1],
                 delay: 0.25,
               }}
-              className="flex flex-col items-center gap-3 text-center"
+              className="flex flex-col items-center gap-2 text-center sm:gap-3"
             >
               {headline && (
-                <h2 className="font-hero text-[24px] font-bold leading-tight tracking-[-0.5px] text-[var(--colors-content-primary)] sm:text-[28px]">
+                <h2 className="font-hero text-[18px] font-bold leading-tight tracking-[-0.4px] text-[var(--colors-content-primary)] sm:text-[24px] md:text-[28px]">
                   {headline}
                 </h2>
               )}
               {sub && (
                 <p
-                  className="max-w-[520px] text-[16px] leading-[1.45] tracking-[0.1px] text-[var(--colors-content-tertiary)]"
+                  className="max-w-[520px] text-[13px] leading-[1.45] tracking-[0.1px] text-[var(--colors-content-tertiary)] sm:text-[16px]"
                   style={{ fontFamily: "var(--font-ui)" }}
                 >
                   {sub}

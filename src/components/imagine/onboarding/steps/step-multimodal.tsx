@@ -41,8 +41,8 @@ function ModCard({
         blur={20}
       >
         <div
-          className={`relative h-[180px] w-[240px] overflow-hidden ${
-            edgeToEdge ? "" : "p-4"
+          className={`relative h-[130px] w-[150px] overflow-hidden sm:h-[160px] sm:w-[200px] md:h-[180px] md:w-[240px] ${
+            edgeToEdge ? "" : "p-3 sm:p-4"
           }`}
         >
           {children}
@@ -233,7 +233,7 @@ export function StepMultimodal({ onContinue }: { onContinue: () => void }) {
   };
 
   return (
-    <div className="flex h-full w-full max-w-[920px] flex-col items-center justify-center">
+    <div className="flex h-full w-full max-w-[920px] flex-col items-center justify-center px-2 sm:px-0">
       {/* Prompt pill with send button on the right */}
       <motion.div
         initial={{ opacity: 0, y: -10 }}
@@ -247,7 +247,7 @@ export function StepMultimodal({ onContinue }: { onContinue: () => void }) {
         >
           <div className="flex items-center gap-3 py-2 pl-5 pr-1.5">
             <span
-              className="text-[14px] text-[var(--colors-content-primary)]"
+              className="text-[12px] text-[var(--colors-content-primary)] sm:text-[13px] md:text-[14px]"
               style={{ fontFamily: "var(--font-ui)" }}
             >
               &ldquo;{PROMPT_TEXT}&rdquo;
@@ -267,8 +267,9 @@ export function StepMultimodal({ onContinue }: { onContinue: () => void }) {
 
       {/* Branching arrows — sits between pill and cards as a flex sibling */}
       <svg
-        className="pointer-events-none my-3 h-[88px] w-[760px]"
+        className="pointer-events-none my-2 h-[60px] w-[480px] max-w-full sm:my-3 sm:h-[76px] sm:w-[620px] md:h-[88px] md:w-[760px]"
         viewBox="0 0 760 88"
+        preserveAspectRatio="none"
         aria-hidden
       >
         <defs>
@@ -336,7 +337,7 @@ export function StepMultimodal({ onContinue }: { onContinue: () => void }) {
         ))}
       </svg>
 
-      <div className="flex items-start gap-8">
+      <div className="flex items-start gap-3 sm:gap-5 md:gap-8">
         <ModCard
           icon={<AudioLines className="size-3.5" strokeWidth={1.6} />}
           label="Audio"

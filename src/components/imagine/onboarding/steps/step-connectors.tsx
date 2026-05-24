@@ -91,8 +91,8 @@ function ChipEl({ chip, index }: { chip: Chip; index: number }) {
           tint="rgba(255,255,255,0.04)"
           blur={20}
         >
-          <div className="flex items-center gap-2 px-3 py-2">
-            <span className="relative flex size-5 shrink-0 items-center justify-center overflow-hidden rounded-full">
+          <div className="flex items-center gap-1.5 px-2 py-1.5 sm:gap-2 sm:px-3 sm:py-2">
+            <span className="relative flex size-4 shrink-0 items-center justify-center overflow-hidden rounded-full sm:size-5">
               <Image
                 src={chip.logo}
                 alt=""
@@ -103,14 +103,14 @@ function ChipEl({ chip, index }: { chip: Chip; index: number }) {
             </span>
             <span className="flex flex-col leading-none">
               <span
-                className="text-[12px] font-medium text-[var(--colors-content-primary)]"
+                className="text-[10px] font-medium text-[var(--colors-content-primary)] sm:text-[12px]"
                 style={{ fontFamily: "var(--font-ui)" }}
               >
                 {chip.label}
               </span>
               {chip.sub && (
                 <span
-                  className="mt-0.5 text-[9px] text-[var(--colors-content-tertiary)]"
+                  className="mt-0.5 text-[8px] text-[var(--colors-content-tertiary)] sm:text-[9px]"
                   style={{ fontFamily: "var(--font-ui)" }}
                 >
                   {chip.sub}
@@ -177,9 +177,9 @@ export function StepConnectors() {
       >
         <span className="aura-breathe absolute left-1/2 top-1/2 -z-[1] size-32 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(242,139,130,0.22),transparent_70%)]" />
         <DarkGlass className="rounded-full" tint="rgba(255,255,255,0.04)" blur={20}>
-          <div className="flex size-14 items-center justify-center">
+          <div className="flex size-10 items-center justify-center sm:size-14">
             <Share2
-              className="size-5 text-[var(--colors-content-primary)]"
+              className="size-4 text-[var(--colors-content-primary)] sm:size-5"
               strokeWidth={1.6}
             />
           </div>

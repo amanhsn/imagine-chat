@@ -54,7 +54,7 @@ function Card({
       <DarkGlass className="h-full rounded-[20px] transition-[box-shadow,border-color] duration-300 group-hover:shadow-[0_24px_60px_-12px_rgba(0,0,0,0.7),0_0_0_1px_rgba(255,255,255,0.12)]">
         <div className="flex h-full flex-col">
           {/* Visual — fills the top */}
-          <div className="relative min-h-[124px] w-full flex-1 overflow-hidden bg-[#0a0a0a]">
+          <div className="relative min-h-[96px] w-full flex-1 overflow-hidden bg-[#0a0a0a] sm:min-h-[112px] md:min-h-[124px]">
             {children}
           </div>
           {/* Text — bottom block */}
@@ -329,12 +329,12 @@ function PitchStackPreview() {
 
 export function StepUseCases() {
   return (
-    <div className="grid h-full w-full max-w-[960px] grid-cols-1 gap-3 pb-6 pt-2 sm:gap-3.5 md:grid-cols-6 md:grid-rows-2">
+    <div className="grid h-full w-full max-w-[960px] grid-cols-1 gap-2.5 overflow-y-auto pb-4 pt-2 sm:grid-cols-6 sm:gap-3 sm:pb-6 md:grid-rows-2">
       <Card
         icon={<ImageIcon className="size-[15px]" strokeWidth={1.8} />}
         title="Generate any image."
         sub="From a sketch, a photo, a feeling — pixel-perfect output."
-        className="md:col-span-2"
+        className="sm:col-span-2"
         delay={0}
       >
         <ImagePreview />
@@ -344,7 +344,7 @@ export function StepUseCases() {
         icon={<Wand2 className="size-[15px]" strokeWidth={1.8} />}
         title="Animate any frame."
         sub="Bring stills to life with motion that feels intentional."
-        className="md:col-span-2"
+        className="sm:col-span-2"
         delay={0.06}
       >
         <AnimatePreview />
@@ -354,7 +354,7 @@ export function StepUseCases() {
         icon={<Film className="size-[15px]" strokeWidth={1.8} />}
         title="Direct a 60-second film."
         sub="Script, cast, scenes, score, edit — one prompt away."
-        className="md:col-span-2"
+        className="sm:col-span-2"
         delay={0.12}
       >
         <FilmPreview />
@@ -364,7 +364,7 @@ export function StepUseCases() {
         icon={<Megaphone className="size-[15px]" strokeWidth={1.8} />}
         title="Brand-safe ads at scale."
         sub="100+ on-brand creatives per product. Minutes, not weeks."
-        className="md:col-span-3"
+        className="sm:col-span-3"
         delay={0.18}
       >
         <AdsPreview />
@@ -374,7 +374,7 @@ export function StepUseCases() {
         icon={<Shuffle className="size-[15px]" strokeWidth={1.8} />}
         title="Pitch once. Get 30 directions."
         sub="Skip the long prompts. One brief, many futures."
-        className="md:col-span-3"
+        className="sm:col-span-3"
         delay={0.24}
       >
         <PitchStackPreview />

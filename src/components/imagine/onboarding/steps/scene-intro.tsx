@@ -37,7 +37,7 @@ export function SceneIntro({ onContinue }: { onContinue: () => void }) {
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
           className="flex items-center gap-2.5"
         >
-          <span className="relative flex size-9 shrink-0 items-center justify-center overflow-hidden rounded-full">
+          <span className="relative flex size-7 shrink-0 items-center justify-center overflow-hidden rounded-full sm:size-9">
             <video
               autoPlay
               loop
@@ -50,7 +50,7 @@ export function SceneIntro({ onContinue }: { onContinue: () => void }) {
             </video>
           </span>
           <span
-            className="text-[24px] font-semibold leading-none tracking-[-0.3px] text-[var(--colors-content-primary)]"
+            className="text-[18px] font-semibold leading-none tracking-[-0.3px] text-[var(--colors-content-primary)] sm:text-[22px] md:text-[24px]"
             style={{ fontFamily: "var(--font-ui)" }}
           >
             Personal Computer

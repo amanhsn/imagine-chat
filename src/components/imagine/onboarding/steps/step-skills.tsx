@@ -1,7 +1,24 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import { CardStack, CardStackItem } from "@/components/ui/card-stack";
+
+function useBreakpoint() {
+  const [bp, setBp] = useState<"mobile" | "tablet" | "desktop">("desktop");
+  useEffect(() => {
+    const check = () => {
+      const w = window.innerWidth;
+      if (w < 640) setBp("mobile");
+      else if (w < 1024) setBp("tablet");
+      else setBp("desktop");
+    };
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
+  return bp;
+}
 
 const FEATURED: CardStackItem[] = [
   {
@@ -76,7 +93,7 @@ function SkillCard({
         scale: 1.05,
         transition: { type: "spring", stiffness: 320, damping: 22 },
       }}
-      className="group relative h-[76px] cursor-pointer overflow-hidden rounded-[12px] border border-[var(--colors-border-primary)] transition-[border-color,box-shadow] duration-200 hover:z-10 hover:border-white/25 hover:shadow-[0_18px_36px_rgba(0,0,0,0.55),0_0_0_1px_rgba(255,255,255,0.06)]"
+      className="group relative h-[64px] cursor-pointer overflow-hidden rounded-[12px] border border-[var(--colors-border-primary)] transition-[border-color,box-shadow] duration-200 hover:z-10 hover:border-white/25 hover:shadow-[0_18px_36px_rgba(0,0,0,0.55),0_0_0_1px_rgba(255,255,255,0.06)] sm:h-[72px] md:h-[76px]"
     >
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
@@ -108,21 +125,26 @@ function SkillCard({
 }
 
 export function StepSkills() {
+  const bp = useBreakpoint();
+  const cardWidth = bp === "mobile" ? 200 : bp === "tablet" ? 230 : 260;
+  const cardHeight = bp === "mobile" ? 130 : bp === "tablet" ? 145 : 150;
+  const minStageHeight = bp === "mobile" ? 180 : 210;
+
   return (
-    <div className="flex h-full w-full max-w-[1040px] flex-col items-center gap-12 py-2">
+    <div className="flex h-full w-full max-w-[1040px] flex-col items-center gap-8 py-2 sm:gap-10 md:gap-12">
       {/* Featured stack with its own dots controller */}
       <div className="w-full">
         <CardStack
           items={FEATURED}
-          cardWidth={260}
-          cardHeight={150}
+          cardWidth={cardWidth}
+          cardHeight={cardHeight}
           maxVisible={3}
           overlap={0.18}
           spreadDeg={14}
           tiltXDeg={6}
           activeLiftPx={10}
           inactiveScale={0.9}
-          minStageHeight={210}
+          minStageHeight={minStageHeight}
           autoAdvance
           intervalMs={1800}
           pauseOnHover
@@ -131,15 +153,15 @@ export function StepSkills() {
       </div>
 
       {/* Chips + Skill gallery */}
-      <div className="flex w-full flex-col items-center gap-5">
-        <div className="flex items-center justify-center gap-2">
+      <div className="flex w-full flex-col items-center gap-4 sm:gap-5">
+        <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2">
           {CATEGORIES.map((c, i) => {
             const active = i === 0;
             return (
               <button
                 key={c}
                 type="button"
-                className={`inline-flex h-8 cursor-pointer items-center rounded-full px-3 text-[12px] font-medium leading-none tracking-[0.1px] transition-colors ${
+                className={`inline-flex h-7 cursor-pointer items-center rounded-full px-2.5 text-[11px] font-medium leading-none tracking-[0.1px] transition-colors sm:h-8 sm:px-3 sm:text-[12px] ${
                   active
                     ? "bg-[var(--colors-content-primary)] text-[var(--colors-background)]"
                     : "border border-[var(--colors-border-primary)] bg-transparent text-[var(--colors-content-secondary)] hover:bg-[var(--colors-fill-secondary)]"
@@ -152,7 +174,7 @@ export function StepSkills() {
           })}
         </div>
 
-        <div className="grid w-full grid-cols-6 gap-2.5">
+        <div className="grid w-full grid-cols-3 gap-2 sm:grid-cols-4 sm:gap-2.5 md:grid-cols-6">
           {SKILLS.map((s, i) => (
             <SkillCard key={i} imageSrc={s.imageSrc} index={i} />
           ))}
