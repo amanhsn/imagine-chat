@@ -254,19 +254,15 @@ function AdsPreview() {
 /* ─── Pitch: source brief → fan connector → variant thumbnails ─── */
 function PitchStackPreview() {
   const variants = [...IMGS, IMGS[1]!];
-  // The thumb row is a fixed-width 280px strip centered in the card so the
-  // SVG fan above it can use the SAME width and map x exactly to thumb centers.
-  // 6 thumbs @ 40px + 5 gaps @ 8px = 280; centers: 20, 68, 116, 164, 212, 260.
+  // Pill, SVG, and thumb row are flex siblings — the SVG (flex-1) fills the
+  // exact space between pill bottom and thumb top, so the line endpoints
+  // always land on the thumbs regardless of card height.
   const INNER_W = 280;
   const THUMB_CENTERS = [20, 68, 116, 164, 212, 260];
-  // Vertical layout (px from top/bottom of visual area):
-  //   pill top: 12, pill height: 20 ⇒ pill bottom: 32
-  //   thumb bottom margin: 12, thumb height: 60 ⇒ thumb top from bottom: 72
-  // SVG bridges pill bottom → thumb top.
   return (
-    <div className="relative h-full w-full overflow-hidden">
+    <div className="relative flex h-full w-full flex-col items-center overflow-hidden">
       {/* Source brief pill */}
-      <div className="absolute left-1/2 top-3 z-[2] flex h-[20px] -translate-x-1/2 items-center gap-1 rounded-full border border-white/15 bg-white/[0.06] px-2.5 backdrop-blur">
+      <div className="relative z-[2] mt-3 flex h-[20px] items-center gap-1 rounded-full border border-white/15 bg-white/[0.06] px-2.5 backdrop-blur">
         <span className="size-1 rounded-full bg-[var(--colors-fill-brand)] shadow-[0_0_6px_var(--colors-fill-brand)]" />
         <span
           className="text-[8.5px] tracking-[0.3px] text-white/80"
@@ -276,10 +272,10 @@ function PitchStackPreview() {
         </span>
       </div>
 
-      {/* Fan connector — same width and horizontal center as the thumb row */}
+      {/* Fan connector — flex-1 to fill the exact gap between pill and thumbs */}
       <svg
-        className="pointer-events-none absolute left-1/2 z-[1] -translate-x-1/2"
-        style={{ width: `${INNER_W}px`, top: "32px", bottom: "72px" }}
+        className="pointer-events-none w-full flex-1"
+        style={{ maxWidth: `${INNER_W}px` }}
         viewBox={`0 0 ${INNER_W} 100`}
         preserveAspectRatio="none"
         aria-hidden
@@ -300,7 +296,7 @@ function PitchStackPreview() {
 
       {/* Variant thumbnails — fixed 280px row, gap-2, mirrors THUMB_CENTERS */}
       <div
-        className="absolute bottom-3 left-1/2 flex -translate-x-1/2 gap-2"
+        className="mb-3 flex gap-2"
         style={{ width: `${INNER_W}px` }}
       >
         {variants.map((src, i) => (

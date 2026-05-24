@@ -124,7 +124,7 @@ export function StepSkills() {
           inactiveScale={0.9}
           minStageHeight={210}
           autoAdvance
-          intervalMs={800}
+          intervalMs={1800}
           pauseOnHover
           showDots
         />
