@@ -1,0 +1,11 @@
+[   14059ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o @ https://competitor-pulse.vercel.app/login:0
+[   41298ms] Error: Minified React error #418; visit https://react.dev/errors/418?args[]=text&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at rK (https://competitor-pulse-mauve.vercel.app/_next/static/chunks/aee6c7720838f8a2.js:1:46764)
+    at rX (https://competitor-pulse-mauve.vercel.app/_next/static/chunks/aee6c7720838f8a2.js:1:47797)
+    at https://competitor-pulse-mauve.vercel.app/_next/static/chunks/aee6c7720838f8a2.js:1:141516
+    at sp (https://competitor-pulse-mauve.vercel.app/_next/static/chunks/aee6c7720838f8a2.js:1:146677)
+    at sc (https://competitor-pulse-mauve.vercel.app/_next/static/chunks/aee6c7720838f8a2.js:1:138017)
+    at https://competitor-pulse-mauve.vercel.app/_next/static/chunks/aee6c7720838f8a2.js:1:132846
+    at u9 (https://competitor-pulse-mauve.vercel.app/_next/static/chunks/aee6c7720838f8a2.js:1:132947)
+    at sV (https://competitor-pulse-mauve.vercel.app/_next/static/chunks/aee6c7720838f8a2.js:1:159329)
+    at MessagePort.O (https://competitor-pulse-mauve.vercel.app/_next/static/chunks/aee6c7720838f8a2.js:1:8295)

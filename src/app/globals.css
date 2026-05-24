@@ -292,6 +292,71 @@ body {
 }
 
 /* ---------------------------------------------------------------
+   Animated conic-gradient stroke for CTAs.
+   Apply .btn-stroke to a rounded element to get a subtle 1px ring
+   that rotates counter-clockwise.
+   --------------------------------------------------------------- */
+
+@property --btn-stroke-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes btn-stroke-rotate {
+  to {
+    --btn-stroke-angle: -360deg;
+  }
+}
+
+.btn-stroke {
+  position: relative;
+  isolation: isolate;
+}
+
+.btn-stroke::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: conic-gradient(
+    from var(--btn-stroke-angle),
+    rgba(255, 255, 255, 0.7) 0%,
+    rgba(255, 255, 255, 0) 22%,
+    rgba(165, 110, 255, 0.55) 50%,
+    rgba(255, 255, 255, 0) 78%,
+    rgba(255, 255, 255, 0.7) 100%
+  );
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: btn-stroke-rotate 8s linear infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Quieter variant for ghost / outlined buttons */
+.btn-stroke-ghost::before {
+  background: conic-gradient(
+    from var(--btn-stroke-angle),
+    rgba(255, 255, 255, 0.35) 0%,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(242, 139, 130, 0.4) 50%,
+    rgba(255, 255, 255, 0) 70%,
+    rgba(255, 255, 255, 0.35) 100%
+  );
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-stroke::before {
+    animation: none;
+  }
+}
+
+/* ---------------------------------------------------------------
    Onboarding animations.
    --------------------------------------------------------------- */
 
@@ -394,6 +459,28 @@ body {
 .scan-reveal {
   animation: scan-reveal 4.5s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
   will-change: transform, opacity;
+}
+
+/* Horizontal film strip marquee for the Animate preview. The track must
+   duplicate its frame content so the translate by exactly one period
+   wraps seamlessly. */
+@keyframes film-marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.film-marquee {
+  animation: film-marquee 16s linear infinite;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .film-marquee {
+    animation: none;
+  }
 }
 
 /* Gentle floating drift for memory cards and connector nodes. */

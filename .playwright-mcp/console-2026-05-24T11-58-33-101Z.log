@@ -1,0 +1,48 @@
+[      76ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://hyundai-nishat.com/wp-content/themes/hyundainishat/css/font-awesome.min.css:0
+[      76ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://hyundai-nishat.com/wp-content/themes/hyundainishat/css/slick.css:0
+[      76ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://hyundai-nishat.com/wp-content/themes/hyundainishat/css/main.css:0
+[      77ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://hyundai-nishat.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=1779623912:0
+[      77ms] [ERROR] Loading the script 'https://connect.facebook.net/en_US/fbevents.js' violates the following Content Security Policy directive: "script-src 'self' https://www.googletagmanager.com 'unsafe-inline' 'unsafe-eval'". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback. The action has been blocked. @ https://hyundai-nishat.com/elantra/:74
+[      78ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://hyundai-nishat.com/wp-content/plugins/date-time-picker-for-contact-form-7/assets/css/jquery.datetimepicker.min.css?ver=1779623912:0
+[      78ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://hyundai-nishat.com/wp-content/themes/hyundainishat/css/jquery.dataTables.min.css?ver=1779623912:0
+[      99ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://hyundai-nishat.com/wp-content/themes/hyundainishat/js/jquery-3.6.0.min.js:0
+[     100ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://hyundai-nishat.com/wp-content/themes/hyundainishat/js/bootstrap.bundle.min.js:0
+[     100ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://hyundai-nishat.com/wp-content/themes/hyundainishat/js/slick.min.js:0
+[     100ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://hyundai-nishat.com/wp-content/themes/hyundainishat/js/custom.js:0
+[     100ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://hyundai-nishat.com/wp-includes/js/jquery/jquery.min.js?ver=1779623912:0
+[     100ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://hyundai-nishat.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1779623912:0
+[     326ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://hyundai-nishat.com/wp-content/uploads/2026/05/VehicleSide_profile-PNG512x280.webp:0
+[     328ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://hyundai-nishat.com/wp-content/uploads/2025/08/HyundaiPromise_Logo.png:0
+[     328ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://hyundai-nishat.com/wp-content/uploads/2025/04/NX4_SIDE_TRANSPARENT_512x280.webp:0
+[     328ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://hyundai-nishat.com/wp-content/uploads/2025/01/DN8-FL-Right-Side-Transparent-512x280-1.webp:0
+[     328ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://hyundai-nishat.com/wp-content/uploads/2023/11/Sonata-Side-Transparent.webp:0
+[     328ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://hyundai-nishat.com/wp-includes/js/dist/hooks.min.js?ver=1779623913:0
+[     555ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://hyundai-nishat.com/wp-content/uploads/2025/11/CN7.png:0
+[     556ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://hyundai-nishat.com/wp-content/uploads/2023/11/Porter-Side-Transparent.webp:0
+[     560ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://hyundai-nishat.com/wp-content/uploads/2026/02/512x280-1.png:0
+[     560ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://hyundai-nishat.com/wp-content/uploads/2025/06/IONIQ-5-PE_DRIVER_TRANSPARENT_512x280.webp:0
+[     560ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://hyundai-nishat.com/wp-content/uploads/2023/11/Santa-Fe-Right-Side-Transparent.webp:0
+[     560ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://hyundai-nishat.com/wp-content/uploads/2025/06/IONIQ-6-Right-Side-Transparent-512x280-1.webp:0
+[     800ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://hyundai-nishat.com/wp-includes/js/dist/i18n.min.js?ver=1779623913:0
+[     800ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://hyundai-nishat.com/wp-content/plugins/contact-form-7/includes/swv/js/index.js?ver=1779623913:0
+[     802ms] ReferenceError: wp is not defined
+    at wp-i18n-js-after:2:1
+[     801ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://hyundai-nishat.com/wp-content/plugins/contact-form-7/includes/js/index.js?ver=1779623913:0
+[     801ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://hyundai-nishat.com/wp-content/plugins/date-time-picker-for-contact-form-7/assets/js/jquery.datetimepicker.full.min.js?ver=1779623913:0
+[     801ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://hyundai-nishat.com/wp-content/plugins/date-time-picker-for-contact-form-7/assets/js/datetimepicker.js?ver=1779623913:0
+[     801ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://hyundai-nishat.com/wp-content/themes/hyundainishat/js/jquery.dataTables.min.js?ver=1779623913:0
+[     961ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://hyundai-nishat.com/wp-content/themes/hyundainishat/js/3deye.min.js?ver=1779623913:0
+[     961ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://hyundai-nishat.com/wp-content/uploads/2026/05/Vector-Smart-Object-v3.webp:0
+[     962ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://hyundai-nishat.com/wp-content/uploads/2026/01/right-and-down.png:0
+[     962ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://hyundai-nishat.com/wp-content/uploads/2026/05/Vector-Smart-Object-v2.webp:0
+[     962ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://hyundai-nishat.com/wp-content/uploads/2026/05/elantra1.6-banner.webp:0
+[     965ms] [ERROR] Creating a worker from 'blob:https://hyundai-nishat.com/5552915c-f0dd-48b4-a0fd-a6690e8ee24a' violates the following Content Security Policy directive: "script-src 'self' https://www.googletagmanager.com 'unsafe-inline' 'unsafe-eval'". Note that 'worker-src' was not explicitly set, so 'script-src' is used as a fallback. The action has been blocked. @ https://hyundai-nishat.com/wp-includes/js/wp-emoji-loader.min.js:2
+[    1411ms] [ERROR] Loading the script 'https://www.google-analytics.com/analytics.js' violates the following Content Security Policy directive: "script-src 'self' https://www.googletagmanager.com 'unsafe-inline' 'unsafe-eval'". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback. The action has been blocked. @ https://www.googletagmanager.com/gtag/js?id=UA-135281560-1:128
+[    1500ms] [ERROR] Loading the script 'https://www.google-analytics.com/analytics.js' violates the following Content Security Policy directive: "script-src 'self' https://www.googletagmanager.com 'unsafe-inline' 'unsafe-eval'". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback. The action has been blocked. @ https://www.googletagmanager.com/gtm.js?id=GTM-PZBQLR9:208
+[    2525ms] ReferenceError: jQuery is not defined
+    at https://hyundai-nishat.com/elantra/:1390:1
+[    2599ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://hyundai-nishat.com/wp-content/uploads/2023/03/favicon.png:0
+[    2666ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://hyundai-nishat.com/wp-content/themes/hyundainishat/images/favicon.png:0
+[    2749ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://hyundai-nishat.com/wp-content/uploads/2023/03/favicon.png:0
+[    2826ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://hyundai-nishat.com/wp-content/themes/hyundainishat/images/favicon.png:0
+[   18995ms] [WARNING] Failed to execute 'postMessage' on 'DOMWindow': The target origin provided ('https://www.youtube.com') does not match the recipient window's origin ('https://www.google.com'). @ https://www.youtube.com/s/player/c2f7551f/www-widgetapi.vflset/www-widgetapi.js:209

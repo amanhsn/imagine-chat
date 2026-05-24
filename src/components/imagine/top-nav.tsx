@@ -53,7 +53,7 @@ export function TopNav() {
         {/* File name input */}
         <div className="flex max-w-[200px] items-center overflow-hidden rounded-[10px] px-2 py-1">
           <p className="max-w-[122px] truncate text-[14px] font-medium leading-5 tracking-[0.42px] text-[var(--colors-content-primary)]">
-            Untitled Chat
+            Untitled Personal Computer
           </p>
         </div>
       </div>

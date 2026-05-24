@@ -1,0 +1,137 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - complementary [ref=e3]:
+      - generic [ref=e4]:
+        - generic [ref=e5]:
+          - img "Imagine" [ref=e7]
+          - generic [ref=e9]:
+            - button [ref=e10] [cursor=pointer]:
+              - img [ref=e11]
+            - button [ref=e12] [cursor=pointer]:
+              - img [ref=e13]
+        - generic [ref=e16]:
+          - button [ref=e17] [cursor=pointer]:
+            - img [ref=e18]
+          - button [ref=e20] [cursor=pointer]:
+            - img [ref=e21]
+    - generic [ref=e24]:
+      - banner [ref=e25]:
+        - generic [ref=e26]:
+          - button "All creations" [disabled] [ref=e27]:
+            - generic [ref=e28]:
+              - generic [ref=e29]:
+                - img [ref=e30]
+                - generic [ref=e33]: All creations
+              - img [ref=e34]
+          - paragraph [ref=e38]: Untitled Chat
+        - generic [ref=e39]:
+          - generic [ref=e40]:
+            - button [ref=e41] [cursor=pointer]:
+              - img [ref=e42]
+            - button "Upgrade" [ref=e45] [cursor=pointer]:
+              - generic [ref=e46]:
+                - img [ref=e47]
+                - generic [ref=e50]: Upgrade
+            - button "Personal" [ref=e51] [cursor=pointer]:
+              - generic [ref=e52]:
+                - generic [ref=e55]: Personal
+                - img [ref=e56]
+          - generic [ref=e58]:
+            - generic [ref=e59]:
+              - button [ref=e60] [cursor=pointer]:
+                - img [ref=e61]
+              - button [ref=e63] [cursor=pointer]:
+                - img [ref=e65]
+            - img "User avatar" [ref=e70]
+      - main [ref=e72]:
+        - generic [ref=e74]:
+          - generic [ref=e78]:
+            - heading "Hello, Saad" [level=1] [ref=e311]
+            - heading "What world are" [level=2] [ref=e312]
+          - generic [ref=e83]:
+            - generic [ref=e85]:
+              - paragraph [ref=e87]: Create an image with subtle parallax, slow Ken Burns drift on background
+              - generic [ref=e88]:
+                - generic [ref=e89]:
+                  - generic [ref=e90]:
+                    - button [ref=e91] [cursor=pointer]:
+                      - img [ref=e92]
+                    - button "Claude" [ref=e93] [cursor=pointer]:
+                      - generic [ref=e94]:
+                        - generic [ref=e96]: Claude
+                        - img [ref=e97]
+                  - button "Ask run" [ref=e99] [cursor=pointer]:
+                    - generic [ref=e100]:
+                      - generic [ref=e101]: Ask run
+                      - img [ref=e102]
+                - button [ref=e104] [cursor=pointer]:
+                  - img [ref=e105]
+            - generic [ref=e107]:
+              - generic [ref=e108]:
+                - button "Featured" [ref=e109] [cursor=pointer]
+                - button "Viral Video Formats" [ref=e110] [cursor=pointer]
+                - button "Video Special Effects" [ref=e111] [cursor=pointer]
+              - generic [ref=e112]:
+                - button "Design autumn forest with falling leaves" [ref=e113] [cursor=pointer]:
+                  - img [ref=e115]
+                  - generic [ref=e118]: Design autumn forest with falling leaves
+                - button "Sketch mountain landscape at sunrise" [ref=e119] [cursor=pointer]:
+                  - img [ref=e121]
+                  - generic [ref=e124]: Sketch mountain landscape at sunrise
+                - button "Create abstract cityscape with neon lights" [ref=e125] [cursor=pointer]:
+                  - img [ref=e127]
+                  - generic [ref=e130]: Create abstract cityscape with neon lights
+    - generic [ref=e135]:
+      - button "Skip onboarding" [ref=e136] [cursor=pointer]:
+        - img [ref=e137]
+      - main [ref=e140]:
+        - generic [ref=e143]:
+          - generic [ref=e149]:
+            - generic [ref=e150]:
+              - img [ref=e152]
+              - generic [ref=e155]:
+                - heading "Research anything. Ship a doc." [level=3] [ref=e156]
+                - paragraph [ref=e157]: From research to a published PDF or HTML brief.
+            - generic [ref=e160]:
+              - generic [ref=e162]: Untitled.pdf
+              - generic [ref=e163]: 12 pages
+          - generic [ref=e175]:
+            - generic [ref=e176]:
+              - img [ref=e178]
+              - generic [ref=e180]:
+                - heading "Turn an idea into a film." [level=3] [ref=e181]
+                - paragraph [ref=e182]: Script, cast, scenes, music, edits — done.
+            - generic [ref=e187]:
+              - img [ref=e188]
+              - generic [ref=e192]: 0:12 / 0:30
+          - generic [ref=e198]:
+            - generic [ref=e199]:
+              - img [ref=e201]
+              - generic [ref=e202]:
+                - heading "Generate music and voice." [level=3] [ref=e203]
+                - paragraph [ref=e204]: Original soundtracks and voiceovers in one pass.
+            - generic [ref=e206]:
+              - generic [ref=e209]: synthwave_loop · 0:30
+              - img [ref=e211]
+          - generic [ref=e236]:
+            - img [ref=e238]
+            - generic [ref=e241]:
+              - heading "Brand at unfair scale." [level=3] [ref=e242]
+              - paragraph [ref=e243]: 100 UGC and ad variants per product, in minutes.
+          - generic [ref=e259]:
+            - generic [ref=e260]:
+              - img [ref=e262]
+              - generic [ref=e267]:
+                - heading "Direct your own scene." [level=3] [ref=e268]
+                - paragraph [ref=e269]: Storyboard, edit, and export — no team required.
+            - generic [ref=e276]: scene 03
+      - generic [ref=e288]:
+        - generic [ref=e289]:
+          - heading "Imagine builds anything" [level=2] [ref=e290]
+          - paragraph [ref=e291]: Apps, films, brands, music — described in one chat.
+        - button "Continue" [ref=e292] [cursor=pointer]:
+          - text: Continue
+          - img [ref=e293]
+  - button "Open Next.js Dev Tools" [ref=e306] [cursor=pointer]:
+    - img [ref=e307]
+  - alert [ref=e310]

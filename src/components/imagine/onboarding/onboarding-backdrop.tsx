@@ -2,13 +2,25 @@
 
 import { FlickeringGrid } from "@/components/ui/flickering-grid-hero";
 
-export function OnboardingBackdrop() {
+type GlowOrigin = "center" | "top-right";
+
+const GLOW_POS: Record<GlowOrigin, { left: string; top: string }> = {
+  center: { left: "50%", top: "55%" },
+  "top-right": { left: "82%", top: "18%" },
+};
+
+export function OnboardingBackdrop({
+  origin = "center",
+}: {
+  origin?: GlowOrigin;
+}) {
+  const pos = GLOW_POS[origin];
   return (
     <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
       {/* Solid base */}
       <div className="absolute inset-0 bg-[var(--colors-background)]" />
 
-      {/* Flickering grid — stronger than home, faded toward edges */}
+      {/* Flickering grid — coral accent */}
       <FlickeringGrid
         className="absolute inset-0 z-[2] [mask-image:radial-gradient(ellipse_75%_70%_at_50%_55%,#000_30%,transparent_100%)]"
         color="#F28B82"
@@ -18,12 +30,12 @@ export function OnboardingBackdrop() {
         gridGap={12}
       />
 
-      {/* Soft ellipse glow, off-center to give content room */}
+      {/* Peach aurora glow */}
       <div
-        className="ellipse-drift absolute z-[1]"
+        className="ellipse-drift absolute z-[1] transition-[left,top] duration-700 ease-out"
         style={{
-          left: "50%",
-          top: "55%",
+          left: pos.left,
+          top: pos.top,
           width: "720px",
           height: "720px",
         }}
@@ -40,7 +52,7 @@ export function OnboardingBackdrop() {
         />
       </div>
 
-      {/* Vignette for stronger contrast on foreground content */}
+      {/* Vignette */}
       <div
         className="absolute inset-0 z-[3]"
         style={{

@@ -19,8 +19,8 @@ export function ProgressDots({
             animate={{
               width: active ? 22 : 6,
               backgroundColor: active
-                ? "var(--colors-fill-brand)"
-                : "rgba(255,255,255,0.25)",
+                ? "rgba(255,255,255,0.7)"
+                : "rgba(255,255,255,0.2)",
             }}
             transition={{ type: "spring", stiffness: 300, damping: 30 }}
             className="h-[6px] rounded-full"

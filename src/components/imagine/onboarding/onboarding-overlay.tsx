@@ -5,57 +5,71 @@ import { useCallback, useEffect, useState } from "react";
 import { useFirstVisit } from "./use-first-visit";
 import { OnboardingBackdrop } from "./onboarding-backdrop";
 import { OnboardingShell } from "./onboarding-shell";
+import { GlassFilter } from "@/components/ui/liquid-glass";
+import { SceneIntro } from "./steps/scene-intro";
 import { StepUseCases } from "./steps/step-use-cases";
-import { StepSystem } from "./steps/step-system";
-import { StepHermesModels } from "./steps/step-hermes-models";
-import { StepCreate } from "./steps/step-create";
+import { StepSkills } from "./steps/step-skills";
+import { StepConnectors } from "./steps/step-connectors";
+import { StepMultimodal } from "./steps/step-multimodal";
 
-const TOTAL = 4;
-
-type StepMeta = {
-  headline: string;
-  sub: string;
-  ctaLabel: string;
+type SceneMeta = {
+  chromeless?: boolean;
+  glowOrigin?: "center" | "top-right";
+  headline?: string;
+  sub?: string;
+  ctaLabel?: string;
   Scene: React.ComponentType<{ onContinue: () => void }>;
 };
 
-const STEPS: StepMeta[] = [
+const SCENES: SceneMeta[] = [
   {
-    headline: "Imagine builds anything",
-    sub: "Apps, films, brands, music — described in one chat.",
+    chromeless: true,
+    glowOrigin: "center",
+    Scene: SceneIntro,
+  },
+  {
+    glowOrigin: "top-right",
+    headline: "Your personal AI studio",
+    sub: "Built for creators who imagine.",
     ctaLabel: "Continue",
     Scene: StepUseCases,
   },
   {
-    headline: "The system behind every chat",
-    sub: "Skills, connectors, and memory that grow with you.",
+    glowOrigin: "top-right",
+    headline: "Skills will evolve your personal computer",
+    sub: "Every prompt makes it sharper for what you make.",
     ctaLabel: "Continue",
-    Scene: StepSystem,
+    Scene: StepSkills,
   },
   {
-    headline: "Meet HERMES",
-    sub: "Your agent — on every frontier model.",
+    glowOrigin: "top-right",
+    headline: "Plug into your stack",
+    sub: "Connect 40+ tools Imagine already works with.",
     ctaLabel: "Continue",
-    Scene: StepHermesModels,
+    Scene: StepConnectors,
   },
   {
-    headline: "Create images, music, and voice",
-    sub: "from a single prompt, in a single chat.",
+    glowOrigin: "center",
+    headline: "One prompt. Audio, video, image.",
+    sub: "Generate every modality from a single brief.",
     ctaLabel: "Get started",
-    Scene: StepCreate,
+    Scene: StepMultimodal,
   },
 ];
 
+const TOTAL_SCENES = SCENES.length;
+const DOT_COUNT = TOTAL_SCENES - 1; // intro excluded
+
 export function OnboardingOverlay() {
   const { open, ready, dismiss } = useFirstVisit();
-  const [step, setStep] = useState(0);
+  const [scene, setScene] = useState(0);
 
   const next = useCallback(() => {
-    setStep((s) => (s < TOTAL - 1 ? s + 1 : s));
+    setScene((s) => (s < TOTAL_SCENES - 1 ? s + 1 : s));
   }, []);
 
   const prev = useCallback(() => {
-    setStep((s) => (s > 0 ? s - 1 : s));
+    setScene((s) => (s > 0 ? s - 1 : s));
   }, []);
 
   const complete = useCallback(() => {
@@ -63,12 +77,12 @@ export function OnboardingOverlay() {
   }, [dismiss]);
 
   const onContinue = useCallback(() => {
-    if (step === TOTAL - 1) {
+    if (scene === TOTAL_SCENES - 1) {
       complete();
     } else {
       next();
     }
-  }, [step, complete, next]);
+  }, [scene, complete, next]);
 
   useEffect(() => {
     if (!open) return;
@@ -93,8 +107,10 @@ export function OnboardingOverlay() {
 
   if (!ready) return null;
 
-  const meta = STEPS[step]!;
+  const meta = SCENES[scene]!;
   const Scene = meta.Scene;
+  // Intro is scene 0 → dotIndex = -1 (no highlight). Steps 1..4 → dotIndex 0..3
+  const dotIndex = scene === 0 ? -1 : scene - 1;
 
   return (
     <AnimatePresence>
@@ -107,21 +123,24 @@ export function OnboardingOverlay() {
           transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
           className="fixed inset-0 z-[100] overflow-hidden"
         >
-          <OnboardingBackdrop />
+          <GlassFilter />
+          <OnboardingBackdrop origin={meta.glowOrigin ?? "center"} />
 
           <div className="relative z-[1] flex h-full w-full flex-col">
             <OnboardingShell
-              step={step}
-              total={TOTAL}
+              scene={scene}
+              dotCount={DOT_COUNT}
+              dotIndex={dotIndex}
               headline={meta.headline}
               sub={meta.sub}
               ctaLabel={meta.ctaLabel}
               onContinue={onContinue}
               onSkip={complete}
+              chromeless={meta.chromeless}
             >
               <AnimatePresence mode="wait">
                 <motion.div
-                  key={step}
+                  key={scene}
                   initial={{ opacity: 0, y: 12 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -12 }}

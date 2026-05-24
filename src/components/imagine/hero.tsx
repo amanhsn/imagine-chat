@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Plus,
   ChevronDown,
@@ -6,6 +8,7 @@ import {
   CornerDownRight,
 } from "lucide-react";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 import { TypewriterHero } from "./typewriter-hero";
 
 function PresetRow({ children }: { children: React.ReactNode }) {
@@ -48,7 +51,24 @@ function Tab({
   );
 }
 
+const DEFAULT_PROMPT =
+  "Create an image with subtle parallax, slow Ken Burns drift on background";
+
 export function Hero() {
+  const [prompt, setPrompt] = useState(DEFAULT_PROMPT);
+
+  useEffect(() => {
+    try {
+      const pending = window.localStorage.getItem("pendingOnboardPrompt");
+      if (pending) {
+        setPrompt(pending);
+        window.localStorage.removeItem("pendingOnboardPrompt");
+      }
+    } catch {
+      // ignore
+    }
+  }, []);
+
   return (
     <main className="flex w-full flex-1 flex-col items-center px-4 pb-8 pt-2">
       <div className="flex w-full max-w-[760px] flex-1 flex-col items-center justify-center py-6">
@@ -77,9 +97,14 @@ export function Hero() {
             <div className="flex w-full flex-col items-start overflow-hidden rounded-[20px] border border-[var(--colors-border-primary)] bg-[var(--colors-fill-primary-variant)] px-4 py-3 shadow-[0px_4px_8px_0px_rgba(0,0,0,0.2)]">
               <div className="flex w-full flex-col items-start gap-4">
                 <div className="flex w-full items-center overflow-hidden py-1 pr-3">
-                  <p className="txt-shimmer text-[14px] leading-5 tracking-[0.28px] sm:whitespace-nowrap">
-                    Create an image with subtle parallax, slow Ken Burns drift
-                    on background
+                  <p
+                    className={`text-[14px] leading-5 tracking-[0.28px] sm:whitespace-nowrap ${
+                      prompt === DEFAULT_PROMPT
+                        ? "txt-shimmer"
+                        : "text-[var(--colors-content-primary)]"
+                    }`}
+                  >
+                    {prompt}
                   </p>
                 </div>
 
@@ -143,7 +168,8 @@ export function Hero() {
                   {/* Send */}
                   <button
                     type="button"
-                    className="flex size-8 cursor-pointer items-center justify-center rounded-full bg-[var(--colors-fill-brand)] p-[7px] transition-colors hover:bg-[var(--colors-fill-brand-hover)]"
+                    className="flex size-8 cursor-pointer items-center justify-center rounded-full p-[7px] text-white transition-colors hover:brightness-110"
+                    style={{ backgroundColor: "#C96A47" }}
                   >
                     <ArrowUp
                       className="size-[18px] text-white"

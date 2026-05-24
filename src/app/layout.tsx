@@ -41,7 +41,7 @@ const pixeloidSans = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Imagine — Untitled Chat",
+  title: "Imagine — Untitled Personal Computer",
   description: "Imagine web editor",
 };
 
