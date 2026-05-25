@@ -36,8 +36,8 @@ const SCENES: SceneMeta[] = [
   },
   {
     glowOrigin: "top-right",
-    headline: "It gets fluent in you.",
-    sub: "Stack skills like spells. Each prompt teaches the next.",
+    headline: "Pick a style. It picks up yours.",
+    sub: "A library of skills that learn your taste, prompt by prompt.",
     ctaLabel: "Continue",
     Scene: StepSkills,
   },
@@ -50,8 +50,8 @@ const SCENES: SceneMeta[] = [
   },
   {
     glowOrigin: "center",
-    headline: "One sentence. Three finished assets.",
-    sub: "Type a brief — walk away with the ad.",
+    headline: "One brief. Any format you need.",
+    sub: "Audio, video, image — generated together, from a single sentence.",
     ctaLabel: "Get started",
     Scene: StepMultimodal,
   },
