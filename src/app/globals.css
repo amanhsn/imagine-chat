@@ -46,7 +46,7 @@
   --colors-content-primary-disabled: rgba(0, 0, 0, 0.3);
   --colors-content-secondary: #6f6f6f; /* Neutral 60 */
   --colors-content-tertiary: #8d8d8d; /* Neutral 50 */
-  --colors-surface-deep: #eaeaea; /* Neutral 20 for card-visual contrast */
+  --colors-surface-deep: #ffffff; /* white blends visual into the card body */
   --vignette-strength: 0.04;
   --glass-tint: rgba(255, 255, 255, 0.7);
   --glass-rim: rgba(0, 0, 0, 0.08);

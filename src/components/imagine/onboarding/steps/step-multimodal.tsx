@@ -280,9 +280,21 @@ export function StepMultimodal({ onContinue }: { onContinue: () => void }) {
             y2="44"
             spreadMethod="repeat"
           >
-            <stop offset="0" stopColor="rgba(255,255,255,0.16)" />
-            <stop offset="0.5" stopColor="rgba(255,255,255,0.9)" />
-            <stop offset="1" stopColor="rgba(255,255,255,0.16)" />
+            <stop
+              offset="0"
+              stopColor="currentColor"
+              stopOpacity="0.18"
+            />
+            <stop
+              offset="0.5"
+              stopColor="currentColor"
+              stopOpacity="0.85"
+            />
+            <stop
+              offset="1"
+              stopColor="currentColor"
+              stopOpacity="0.18"
+            />
             <animateTransform
               attributeName="gradientTransform"
               type="translate"
@@ -320,7 +332,8 @@ export function StepMultimodal({ onContinue }: { onContinue: () => void }) {
             <path
               d={`M ${p.x - 4} 73 L ${p.x} 80 L ${p.x + 4} 73`}
               fill="none"
-              stroke="rgba(255,255,255,0.32)"
+              stroke="currentColor"
+              strokeOpacity="0.32"
               strokeWidth={1.25}
               strokeLinejoin="round"
               strokeLinecap="round"
