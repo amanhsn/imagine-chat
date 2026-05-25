@@ -40,6 +40,13 @@
     0 0 0 1px rgba(255, 255, 255, 0.12);
 }
 
+/* Inverts a white SVG (e.g. the Imagine logo) on light theme so it
+   renders dark on the cream page. Uses descendant selector because
+   the data-theme attribute is set on the overlay root. */
+[data-theme="light"] .theme-invert {
+  filter: invert(1);
+}
+
 /* ─── Light theme override (data-theme="light") ─── */
 [data-theme="light"] {
   --colors-background: #f4f4f4; /* Neutral 10 (surface-primary) */

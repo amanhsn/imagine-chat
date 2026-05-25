@@ -72,7 +72,7 @@ export function OnboardingShell({
           {/* Top bar */}
           <header className="relative z-[20] flex shrink-0 items-center justify-between px-3 pt-3 sm:px-5 sm:pt-4">
             <div className="flex items-center gap-1.5 sm:gap-2">
-              <span className="flex size-5 items-center justify-center">
+              <span className="theme-invert flex size-5 items-center justify-center">
                 <Image
                   src="/assets/logo-imagine.svg"
                   alt="Imagine"
