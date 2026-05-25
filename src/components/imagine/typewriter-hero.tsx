@@ -126,7 +126,7 @@ export function TypewriterHero() {
   return (
     <div className="flex min-w-0 flex-1 flex-col items-center justify-center gap-2 sm:items-start">
       <div className="flex w-full items-center justify-center sm:pl-2">
-        <h1 className="font-hero flex-1 text-center text-[24px] font-normal leading-8 tracking-[-1.5px] text-[var(--colors-content-primary)] sm:text-left sm:text-[32px] sm:leading-10 sm:tracking-[-2.56px]">
+        <h1 className="flex-1 text-center text-[24px] font-semibold leading-8 tracking-[-0.8px] text-[var(--colors-content-primary)] sm:text-left sm:text-[32px] sm:leading-10 sm:tracking-[-1px]">
           <span>{greeting}</span>
           {showGreetingCaret && (
             <span className="typewriter-caret" aria-hidden="true" />
@@ -135,7 +135,7 @@ export function TypewriterHero() {
         </h1>
       </div>
       <div className="flex w-full items-center justify-center sm:pl-2">
-        <h2 className="font-hero flex-1 text-center text-[24px] font-normal leading-8 tracking-[-1.5px] text-[var(--colors-content-primary)] sm:text-left sm:text-[32px] sm:leading-10 sm:tracking-[-2.56px]">
+        <h2 className="flex-1 text-center text-[24px] font-semibold leading-8 tracking-[-0.8px] text-[var(--colors-content-primary)] sm:text-left sm:text-[32px] sm:leading-10 sm:tracking-[-1px]">
           <span>{prompt}</span>
           {showPromptCaret && (
             <span className="typewriter-caret" aria-hidden="true" />
