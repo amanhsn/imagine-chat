@@ -51,7 +51,7 @@ function Card({
       }}
       className={`${className} group cursor-default`}
     >
-      <DarkGlass className="h-full rounded-[20px] transition-[box-shadow,border-color] duration-300 group-hover:shadow-[0_24px_60px_-12px_rgba(0,0,0,0.7),0_0_0_1px_rgba(255,255,255,0.12)]">
+      <DarkGlass className="h-full rounded-[20px] transition-[box-shadow,border-color] duration-300 group-hover:shadow-[var(--glass-hover-shadow)]">
         <div className="flex h-full flex-col">
           {/* Visual — fills the top */}
           <div className="relative min-h-[96px] w-full flex-1 overflow-hidden bg-[var(--colors-surface-deep)] sm:min-h-[112px] md:min-h-[124px]">

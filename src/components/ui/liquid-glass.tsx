@@ -96,8 +96,7 @@ export const DarkGlass: React.FC<DarkGlassProps> = ({
   <div
     className={`relative overflow-hidden ${className}`}
     style={{
-      boxShadow:
-        "0 24px 60px -12px rgba(0,0,0,0.45), 0 0 0 1px var(--glass-rim)",
+      boxShadow: "var(--glass-shadow), 0 0 0 1px var(--glass-rim)",
       ...style,
     }}
   >
@@ -119,10 +118,7 @@ export const DarkGlass: React.FC<DarkGlassProps> = ({
     {/* Top-edge bright highlight + bottom-edge soft shadow */}
     <div
       className="pointer-events-none absolute inset-0 z-20 rounded-[inherit]"
-      style={{
-        boxShadow:
-          "inset 0 1px 0 0 rgba(255,255,255,0.10), inset 0 -1px 0 0 rgba(0,0,0,0.25), inset 1px 0 0 0 rgba(255,255,255,0.04), inset -1px 0 0 0 rgba(0,0,0,0.15)",
-      }}
+      style={{ boxShadow: "var(--glass-inset)" }}
     />
     <div className="relative z-30 h-full">{children}</div>
   </div>
