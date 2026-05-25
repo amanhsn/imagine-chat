@@ -2,7 +2,7 @@
 
 import { ReactNode } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Sun, Moon } from "lucide-react";
 import Image from "next/image";
 import { MonitorFrame } from "./monitor-frame";
 import { ProgressDots } from "./progress-dots";
@@ -21,6 +21,8 @@ type ShellProps = {
   onSkip: () => void;
   /** When true, the scene is rendered full-bleed without any top/bottom chrome */
   chromeless?: boolean;
+  theme?: "dark" | "light";
+  onToggleTheme?: () => void;
   children: ReactNode;
 };
 
@@ -34,6 +36,8 @@ export function OnboardingShell({
   onContinue,
   onSkip,
   chromeless = false,
+  theme = "dark",
+  onToggleTheme,
   children,
 }: ShellProps) {
   return (
@@ -74,14 +78,34 @@ export function OnboardingShell({
               <ProgressDots total={dotCount} current={dotIndex} />
             </div>
 
-            <button
-              type="button"
-              onClick={onSkip}
-              className="btn-stroke btn-stroke-ghost inline-flex h-7 cursor-pointer items-center rounded-full border border-[var(--colors-border-primary)] bg-transparent px-3 text-[12px] font-medium leading-none tracking-[0.1px] text-[var(--colors-content-secondary)] transition-colors hover:bg-[var(--colors-fill-secondary)] hover:text-[var(--colors-content-primary)]"
-              style={{ fontFamily: "var(--font-ui)" }}
-            >
-              Skip
-            </button>
+            <div className="flex items-center gap-1.5">
+              {onToggleTheme && (
+                <button
+                  type="button"
+                  onClick={onToggleTheme}
+                  aria-label={
+                    theme === "light"
+                      ? "Switch to dark mode"
+                      : "Switch to light mode"
+                  }
+                  className="flex size-7 cursor-pointer items-center justify-center rounded-full border border-[var(--colors-border-primary)] bg-transparent text-[var(--colors-content-secondary)] transition-colors hover:bg-[var(--colors-fill-secondary)] hover:text-[var(--colors-content-primary)]"
+                >
+                  {theme === "light" ? (
+                    <Moon className="size-3.5" strokeWidth={1.7} />
+                  ) : (
+                    <Sun className="size-3.5" strokeWidth={1.7} />
+                  )}
+                </button>
+              )}
+              <button
+                type="button"
+                onClick={onSkip}
+                className="btn-stroke btn-stroke-ghost inline-flex h-7 cursor-pointer items-center rounded-full border border-[var(--colors-border-primary)] bg-transparent px-3 text-[12px] font-medium leading-none tracking-[0.1px] text-[var(--colors-content-secondary)] transition-colors hover:bg-[var(--colors-fill-secondary)] hover:text-[var(--colors-content-primary)]"
+                style={{ fontFamily: "var(--font-ui)" }}
+              >
+                Skip
+              </button>
+            </div>
           </header>
 
           {/* Scene viewport */}

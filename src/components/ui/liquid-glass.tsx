@@ -89,7 +89,7 @@ export const DarkGlass: React.FC<DarkGlassProps> = ({
   children,
   className = "",
   style = {},
-  tint = "rgba(255,255,255,0.035)",
+  tint = "var(--glass-tint)",
   blur = 16,
   distort = false,
 }) => (
@@ -97,7 +97,7 @@ export const DarkGlass: React.FC<DarkGlassProps> = ({
     className={`relative overflow-hidden ${className}`}
     style={{
       boxShadow:
-        "0 24px 60px -12px rgba(0,0,0,0.55), 0 0 0 1px rgba(255,255,255,0.06)",
+        "0 24px 60px -12px rgba(0,0,0,0.45), 0 0 0 1px var(--glass-rim)",
       ...style,
     }}
   >

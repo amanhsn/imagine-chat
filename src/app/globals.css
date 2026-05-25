@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  /* Imagine design tokens — dark theme is the only theme */
+  /* Imagine design tokens — dark default */
   --colors-background: #0f0f0f;
   --colors-fill-primary-variant: #171717;
   --colors-fill-secondary: #212121;
@@ -16,6 +16,34 @@
   --colors-content-primary-disabled: rgba(255, 255, 255, 0.3);
   --colors-content-secondary: #bdbdbd;
   --colors-content-tertiary: rgba(255, 255, 255, 0.5);
+  /* Theme-aware surface used for card visuals + marquee edge fades */
+  --colors-surface-deep: #0a0a0a;
+  /* Vignette + glass tints used by the onboarding chrome */
+  --vignette-strength: 0.55;
+  --glass-tint: rgba(255, 255, 255, 0.035);
+  --glass-rim: rgba(255, 255, 255, 0.06);
+}
+
+/* Light theme override — flipped by toggling data-theme="light" on a wrapper */
+[data-theme="light"] {
+  --colors-background: #FAFAF7;
+  --colors-fill-primary-variant: #F0EFE9;
+  --colors-fill-secondary: #E8E5DC;
+  --colors-fill-secondary-disabled: rgba(232, 229, 220, 0.4);
+  --colors-fill-brand: #8a3ffc;
+  --colors-fill-brand-hover: #a56eff;
+  --colors-fill-brand-secondary: rgba(105, 41, 196, 0.3);
+  --colors-border-primary: rgba(0, 0, 0, 0.08);
+  --colors-border-secondary: rgba(0, 0, 0, 0.14);
+  --colors-border-brand-hover: #a56eff;
+  --colors-content-primary: #1a1a1a;
+  --colors-content-primary-disabled: rgba(26, 26, 26, 0.3);
+  --colors-content-secondary: #4a4a4a;
+  --colors-content-tertiary: rgba(0, 0, 0, 0.55);
+  --colors-surface-deep: #EDEAE1;
+  --vignette-strength: 0.12;
+  --glass-tint: rgba(255, 255, 255, 0.5);
+  --glass-rim: rgba(0, 0, 0, 0.06);
 
   --font-hero: var(--font-matrix-display), "Matrixtype Display",
     "Helvetica Neue", Helvetica, Arial, sans-serif;

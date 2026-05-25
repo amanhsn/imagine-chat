@@ -54,7 +54,7 @@ function Card({
       <DarkGlass className="h-full rounded-[20px] transition-[box-shadow,border-color] duration-300 group-hover:shadow-[0_24px_60px_-12px_rgba(0,0,0,0.7),0_0_0_1px_rgba(255,255,255,0.12)]">
         <div className="flex h-full flex-col">
           {/* Visual — fills the top */}
-          <div className="relative min-h-[96px] w-full flex-1 overflow-hidden bg-[#0a0a0a] sm:min-h-[112px] md:min-h-[124px]">
+          <div className="relative min-h-[96px] w-full flex-1 overflow-hidden bg-[var(--colors-surface-deep)] sm:min-h-[112px] md:min-h-[124px]">
             {children}
           </div>
           {/* Text — bottom block */}
@@ -169,8 +169,8 @@ function AnimatePreview() {
       </div>
 
       {/* edge fade */}
-      <div className="pointer-events-none absolute inset-y-0 left-0 z-[3] w-8 bg-gradient-to-r from-[#0a0a0a] to-transparent" />
-      <div className="pointer-events-none absolute inset-y-0 right-0 z-[3] w-8 bg-gradient-to-l from-[#0a0a0a] to-transparent" />
+      <div className="pointer-events-none absolute inset-y-0 left-0 z-[3] w-8 bg-gradient-to-r from-[var(--colors-surface-deep)] to-transparent" />
+      <div className="pointer-events-none absolute inset-y-0 right-0 z-[3] w-8 bg-gradient-to-l from-[var(--colors-surface-deep)] to-transparent" />
     </div>
   );
 }
@@ -245,8 +245,8 @@ function AdsPreview() {
       </div>
 
       {/* edge shadows */}
-      <div className="pointer-events-none absolute inset-y-0 left-0 z-[3] w-16 bg-gradient-to-r from-[#0a0a0a] via-[#0a0a0a]/85 to-transparent" />
-      <div className="pointer-events-none absolute inset-y-0 right-0 z-[3] w-16 bg-gradient-to-l from-[#0a0a0a] via-[#0a0a0a]/85 to-transparent" />
+      <div className="pointer-events-none absolute inset-y-0 left-0 z-[3] w-16 bg-gradient-to-r from-[var(--colors-surface-deep)] via-[var(--colors-surface-deep)]/85 to-transparent" />
+      <div className="pointer-events-none absolute inset-y-0 right-0 z-[3] w-16 bg-gradient-to-l from-[var(--colors-surface-deep)] via-[var(--colors-surface-deep)]/85 to-transparent" />
     </div>
   );
 }

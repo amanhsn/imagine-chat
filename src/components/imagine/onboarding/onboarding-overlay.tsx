@@ -63,6 +63,12 @@ const DOT_COUNT = TOTAL_SCENES - 1; // intro excluded
 export function OnboardingOverlay() {
   const { open, ready, dismiss } = useFirstVisit();
   const [scene, setScene] = useState(0);
+  const [theme, setTheme] = useState<"dark" | "light">("dark");
+
+  const toggleTheme = useCallback(
+    () => setTheme((t) => (t === "dark" ? "light" : "dark")),
+    [],
+  );
 
   const next = useCallback(() => {
     setScene((s) => (s < TOTAL_SCENES - 1 ? s + 1 : s));
@@ -121,7 +127,8 @@ export function OnboardingOverlay() {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-          className="fixed inset-0 z-[100] overflow-hidden"
+          data-theme={theme}
+          className="fixed inset-0 z-[100] overflow-hidden bg-[var(--colors-background)] text-[var(--colors-content-primary)]"
         >
           <GlassFilter />
           <OnboardingBackdrop origin={meta.glowOrigin ?? "center"} />
@@ -137,6 +144,8 @@ export function OnboardingOverlay() {
               onContinue={onContinue}
               onSkip={complete}
               chromeless={meta.chromeless}
+              theme={theme}
+              onToggleTheme={toggleTheme}
             >
               <AnimatePresence mode="wait">
                 <motion.div

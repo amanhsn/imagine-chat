@@ -52,12 +52,12 @@ export function OnboardingBackdrop({
         />
       </div>
 
-      {/* Vignette */}
+      {/* Vignette — strength varies by theme */}
       <div
         className="absolute inset-0 z-[3]"
         style={{
           background:
-            "radial-gradient(ellipse 90% 80% at 50% 50%, transparent 40%, rgba(0,0,0,0.55) 100%)",
+            "radial-gradient(ellipse 90% 80% at 50% 50%, transparent 40%, rgba(0,0,0,var(--vignette-strength)) 100%)",
         }}
       />
     </div>
