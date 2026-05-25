@@ -332,8 +332,8 @@ export function StepUseCases() {
     <div className="grid h-full w-full max-w-[960px] grid-cols-1 gap-2.5 overflow-y-auto pb-4 pt-2 sm:grid-cols-6 sm:gap-3 sm:pb-6 md:grid-rows-2">
       <Card
         icon={<ImageIcon className="size-[15px]" strokeWidth={1.8} />}
-        title="Generate any image."
-        sub="From a sketch, a photo, a feeling — pixel-perfect output."
+        title="Research a look."
+        sub="Moodboards, hero shots, references — gathered in seconds."
         className="sm:col-span-2"
         delay={0}
       >
@@ -342,8 +342,8 @@ export function StepUseCases() {
 
       <Card
         icon={<Wand2 className="size-[15px]" strokeWidth={1.8} />}
-        title="Animate any frame."
-        sub="Bring stills to life with motion that feels intentional."
+        title="Animate the still."
+        sub="Frames you already love, in motion that feels intentional."
         className="sm:col-span-2"
         delay={0.06}
       >
@@ -352,8 +352,8 @@ export function StepUseCases() {
 
       <Card
         icon={<Film className="size-[15px]" strokeWidth={1.8} />}
-        title="Direct a 60-second film."
-        sub="Script, cast, scenes, score, edit — one prompt away."
+        title="Film a 60-second story."
+        sub="Script, cast, scenes, score, cut — one prompt to wrap."
         className="sm:col-span-2"
         delay={0.12}
       >
@@ -362,8 +362,8 @@ export function StepUseCases() {
 
       <Card
         icon={<Megaphone className="size-[15px]" strokeWidth={1.8} />}
-        title="Brand-safe ads at scale."
-        sub="100+ on-brand creatives per product. Minutes, not weeks."
+        title="Marketing at unfair scale."
+        sub="100 on-brand creatives per product. Minutes, not weeks."
         className="sm:col-span-3"
         delay={0.18}
       >
@@ -372,8 +372,8 @@ export function StepUseCases() {
 
       <Card
         icon={<Shuffle className="size-[15px]" strokeWidth={1.8} />}
-        title="Pitch once. Get 30 directions."
-        sub="Skip the long prompts. One brief, many futures."
+        title="Pitch in 30 directions."
+        sub="Skip the long brief. One sentence, many futures."
         className="sm:col-span-3"
         delay={0.24}
       >
