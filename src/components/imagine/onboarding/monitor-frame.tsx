@@ -15,15 +15,10 @@ export function MonitorFrame({ children }: { children: ReactNode }) {
         className="relative h-full w-full overflow-hidden rounded-[26px] bg-[var(--colors-background)]"
         style={{
           boxShadow: [
-            // Bright top edge highlight — glass catches light
-            "inset 0 1px 0 rgba(255,255,255,0.09)",
-            // Hairline glass rim
-            "inset 0 0 0 1px rgba(255,255,255,0.05)",
-            // Soft inner shading (depth)
-            "inset 0 0 80px 12px rgba(0,0,0,0.45)",
-            // Outer drop shadow — screen floats on the desk
-            "0 50px 140px rgba(0,0,0,0.7)",
-            // Subtle brand bloom outside the bezel
+            "inset 0 1px 0 var(--frame-rim-highlight)",
+            "inset 0 0 0 1px var(--glass-rim)",
+            "inset 0 0 80px 12px var(--frame-inner-vignette)",
+            "0 50px 140px var(--frame-outer-shadow)",
             "0 0 80px rgba(138,63,252,0.06)",
           ].join(", "),
         }}
@@ -40,7 +35,7 @@ export function MonitorFrame({ children }: { children: ReactNode }) {
           className="pointer-events-none absolute inset-0 z-[20] opacity-[0.05]"
           style={{
             background:
-              "repeating-linear-gradient(0deg, transparent 0 2px, rgba(255,255,255,0.6) 2px 3px)",
+              "repeating-linear-gradient(0deg, transparent 0 2px, var(--frame-scan-line) 2px 3px)",
           }}
         />
 
@@ -49,7 +44,7 @@ export function MonitorFrame({ children }: { children: ReactNode }) {
           className="pointer-events-none absolute inset-0 z-[21]"
           style={{
             background:
-              "radial-gradient(ellipse 110% 95% at 50% 50%, transparent 55%, rgba(0,0,0,0.55) 100%)",
+              "radial-gradient(ellipse 110% 95% at 50% 50%, transparent 55%, rgba(0,0,0,var(--vignette-strength)) 100%)",
           }}
         />
 
@@ -76,7 +71,7 @@ export function MonitorFrame({ children }: { children: ReactNode }) {
           className="pointer-events-none absolute inset-0 z-[22]"
           style={{
             background:
-              "radial-gradient(ellipse 60% 40% at 4% 98%, rgba(0,0,0,0.6), transparent 60%)",
+              "radial-gradient(ellipse 60% 40% at 4% 98%, var(--frame-outer-shadow), transparent 60%)",
           }}
         />
 
@@ -85,7 +80,7 @@ export function MonitorFrame({ children }: { children: ReactNode }) {
           className="pointer-events-none absolute inset-0 z-[22]"
           style={{
             background:
-              "radial-gradient(ellipse 60% 40% at 96% 98%, rgba(0,0,0,0.6), transparent 60%)",
+              "radial-gradient(ellipse 60% 40% at 96% 98%, var(--frame-outer-shadow), transparent 60%)",
           }}
         />
 

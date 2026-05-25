@@ -86,11 +86,7 @@ function ChipEl({ chip, index }: { chip: Chip; index: number }) {
         className="float-drift"
         style={{ animationDelay: `-${chip.delay ?? 0}s` }}
       >
-        <DarkGlass
-          className="rounded-full"
-          tint="rgba(255,255,255,0.04)"
-          blur={20}
-        >
+        <DarkGlass className="rounded-full" blur={20}>
           <div className="flex items-center gap-1.5 px-2 py-1.5 sm:gap-2 sm:px-3 sm:py-2">
             <span className="relative flex size-4 shrink-0 items-center justify-center overflow-hidden rounded-full sm:size-5">
               <Image
@@ -155,7 +151,7 @@ export function StepConnectors() {
             y1={p.y}
             x2={400}
             y2={230}
-            stroke="rgba(255,255,255,0.08)"
+            stroke="var(--line-stroke)"
             strokeWidth={1}
             initial={{ pathLength: 0, opacity: 0 }}
             animate={{ pathLength: 1, opacity: 1 }}
@@ -176,7 +172,7 @@ export function StepConnectors() {
         className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
       >
         <span className="aura-breathe absolute left-1/2 top-1/2 -z-[1] size-32 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(242,139,130,0.22),transparent_70%)]" />
-        <DarkGlass className="rounded-full" tint="rgba(255,255,255,0.04)" blur={20}>
+        <DarkGlass className="rounded-full" blur={20}>
           <div className="flex size-10 items-center justify-center sm:size-14">
             <Share2
               className="size-4 text-[var(--colors-content-primary)] sm:size-5"

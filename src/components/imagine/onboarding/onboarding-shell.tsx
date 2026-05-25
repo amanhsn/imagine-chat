@@ -43,9 +43,30 @@ export function OnboardingShell({
   return (
     <MonitorFrame>
       {chromeless ? (
-        <main className="relative z-[10] flex h-full w-full flex-1 items-center justify-center overflow-hidden">
-          {children}
-        </main>
+        <>
+          {/* Always-visible theme toggle on chromeless scenes (intro) */}
+          {onToggleTheme && (
+            <button
+              type="button"
+              onClick={onToggleTheme}
+              aria-label={
+                theme === "light"
+                  ? "Switch to dark mode"
+                  : "Switch to light mode"
+              }
+              className="absolute right-4 top-4 z-[30] flex size-7 cursor-pointer items-center justify-center rounded-full border border-[var(--colors-border-primary)] bg-transparent text-[var(--colors-content-secondary)] transition-colors hover:bg-[var(--colors-fill-secondary)] hover:text-[var(--colors-content-primary)] sm:right-5 sm:top-5"
+            >
+              {theme === "light" ? (
+                <Moon className="size-3.5" strokeWidth={1.7} />
+              ) : (
+                <Sun className="size-3.5" strokeWidth={1.7} />
+              )}
+            </button>
+          )}
+          <main className="relative z-[10] flex h-full w-full flex-1 items-center justify-center overflow-hidden">
+            {children}
+          </main>
+        </>
       ) : (
         <>
           {/* Top bar */}

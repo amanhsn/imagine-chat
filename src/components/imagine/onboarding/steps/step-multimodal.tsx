@@ -35,11 +35,7 @@ function ModCard({
       transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1], delay }}
       className="flex flex-col items-center gap-3"
     >
-      <DarkGlass
-        className="rounded-[16px]"
-        tint="rgba(255,255,255,0.035)"
-        blur={20}
-      >
+      <DarkGlass className="rounded-[16px]" blur={20}>
         <div
           className={`relative h-[130px] w-[150px] overflow-hidden sm:h-[160px] sm:w-[200px] md:h-[180px] md:w-[240px] ${
             edgeToEdge ? "" : "p-3 sm:p-4"
@@ -240,11 +236,7 @@ export function StepMultimodal({ onContinue }: { onContinue: () => void }) {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
       >
-        <DarkGlass
-          className="rounded-full"
-          tint="rgba(255,255,255,0.05)"
-          blur={20}
-        >
+        <DarkGlass className="rounded-full" blur={20}>
           <div className="flex items-center gap-3 py-2 pl-5 pr-1.5">
             <span
               className="text-[12px] text-[var(--colors-content-primary)] sm:text-[13px] md:text-[14px]"

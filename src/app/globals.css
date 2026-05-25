@@ -1,49 +1,60 @@
 @import "tailwindcss";
 
 :root {
-  /* Imagine design tokens — dark default */
-  --colors-background: #0f0f0f;
-  --colors-fill-primary-variant: #171717;
-  --colors-fill-secondary: #212121;
-  --colors-fill-secondary-disabled: rgba(33, 33, 33, 0.3);
-  --colors-fill-brand: #8a3ffc;
-  --colors-fill-brand-hover: #a56eff;
+  /* ─── Imagine Art design tokens — dark default ───
+     Aligned with imagine-design-system.vercel.app/colors */
+  --colors-background: #262626; /* Neutral 90 */
+  --colors-fill-primary-variant: #393939; /* Neutral 80 (surface-elevated) */
+  --colors-fill-secondary: #393939; /* Neutral 80 (surface-secondary) */
+  --colors-fill-secondary-disabled: rgba(57, 57, 57, 0.3);
+  --colors-fill-brand: #8a3ffc; /* Primary 60 */
+  --colors-fill-brand-hover: #a56eff; /* dark: Primary 50 */
   --colors-fill-brand-secondary: rgba(105, 41, 196, 0.3);
-  --colors-border-primary: #212121;
-  --colors-border-secondary: #2e2e2e;
+  --colors-border-primary: #525252; /* Neutral 70 */
+  --colors-border-secondary: #393939; /* Neutral 80 */
   --colors-border-brand-hover: #a56eff;
-  --colors-content-primary: #ffffff;
-  --colors-content-primary-disabled: rgba(255, 255, 255, 0.3);
-  --colors-content-secondary: #bdbdbd;
-  --colors-content-tertiary: rgba(255, 255, 255, 0.5);
-  /* Theme-aware surface used for card visuals + marquee edge fades */
-  --colors-surface-deep: #0a0a0a;
-  /* Vignette + glass tints used by the onboarding chrome */
+  --colors-content-primary: #f4f4f4; /* Neutral 10 */
+  --colors-content-primary-disabled: rgba(244, 244, 244, 0.3);
+  --colors-content-secondary: #c6c6c6; /* Neutral 40 */
+  --colors-content-tertiary: #8d8d8d; /* Neutral 50 */
+  /* Theme-aware deep surface used for card visuals + marquee edge fades */
+  --colors-surface-deep: #1a1a1a;
+  /* Chrome adornments (vignettes, glass, lines) */
   --vignette-strength: 0.55;
-  --glass-tint: rgba(255, 255, 255, 0.035);
-  --glass-rim: rgba(255, 255, 255, 0.06);
+  --glass-tint: rgba(255, 255, 255, 0.05);
+  --glass-rim: rgba(255, 255, 255, 0.08);
+  --frame-inner-vignette: rgba(0, 0, 0, 0.45);
+  --frame-outer-shadow: rgba(0, 0, 0, 0.7);
+  --frame-rim-highlight: rgba(255, 255, 255, 0.09);
+  --frame-scan-line: rgba(255, 255, 255, 0.6);
+  --line-stroke: rgba(255, 255, 255, 0.18);
 }
 
-/* Light theme override — flipped by toggling data-theme="light" on a wrapper */
+/* ─── Light theme override (data-theme="light") ─── */
 [data-theme="light"] {
-  --colors-background: #FAFAF7;
-  --colors-fill-primary-variant: #F0EFE9;
-  --colors-fill-secondary: #E8E5DC;
-  --colors-fill-secondary-disabled: rgba(232, 229, 220, 0.4);
-  --colors-fill-brand: #8a3ffc;
-  --colors-fill-brand-hover: #a56eff;
-  --colors-fill-brand-secondary: rgba(105, 41, 196, 0.3);
-  --colors-border-primary: rgba(0, 0, 0, 0.08);
-  --colors-border-secondary: rgba(0, 0, 0, 0.14);
-  --colors-border-brand-hover: #a56eff;
-  --colors-content-primary: #1a1a1a;
-  --colors-content-primary-disabled: rgba(26, 26, 26, 0.3);
-  --colors-content-secondary: #4a4a4a;
-  --colors-content-tertiary: rgba(0, 0, 0, 0.55);
-  --colors-surface-deep: #EDEAE1;
-  --vignette-strength: 0.12;
-  --glass-tint: rgba(255, 255, 255, 0.5);
-  --glass-rim: rgba(0, 0, 0, 0.06);
+  --colors-background: #f4f4f4; /* Neutral 10 (surface-primary) */
+  --colors-fill-primary-variant: #ffffff; /* White (surface-elevated) */
+  --colors-fill-secondary: #eaeaea; /* Neutral 20 (surface-secondary) */
+  --colors-fill-secondary-disabled: rgba(234, 234, 234, 0.4);
+  --colors-fill-brand: #8a3ffc; /* Primary 60 */
+  --colors-fill-brand-hover: #6929c4; /* light: Primary 70 */
+  --colors-fill-brand-secondary: rgba(138, 63, 252, 0.18);
+  --colors-border-primary: #dbdbdb; /* Neutral 30 */
+  --colors-border-secondary: #eaeaea; /* Neutral 20 */
+  --colors-border-brand-hover: #6929c4;
+  --colors-content-primary: #000000;
+  --colors-content-primary-disabled: rgba(0, 0, 0, 0.3);
+  --colors-content-secondary: #6f6f6f; /* Neutral 60 */
+  --colors-content-tertiary: #8d8d8d; /* Neutral 50 */
+  --colors-surface-deep: #eaeaea; /* Neutral 20 for card-visual contrast */
+  --vignette-strength: 0.04;
+  --glass-tint: rgba(255, 255, 255, 0.7);
+  --glass-rim: rgba(0, 0, 0, 0.08);
+  --frame-inner-vignette: rgba(0, 0, 0, 0.04);
+  --frame-outer-shadow: rgba(0, 0, 0, 0.12);
+  --frame-rim-highlight: rgba(255, 255, 255, 0.7);
+  --frame-scan-line: rgba(0, 0, 0, 0.18);
+  --line-stroke: rgba(0, 0, 0, 0.18);
 
   --font-hero: var(--font-matrix-display), "Matrixtype Display",
     "Helvetica Neue", Helvetica, Arial, sans-serif;
