@@ -1,6 +1,14 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { Inter } from "next/font/google";
 import "./globals.css";
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-inter",
+  display: "swap",
+});
 
 const matrixDisplay = localFont({
   src: [
@@ -53,7 +61,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${matrixDisplay.variable} ${matrixBody.variable} ${pixeloidSans.variable} h-full antialiased`}
+      className={`${matrixDisplay.variable} ${matrixBody.variable} ${pixeloidSans.variable} ${inter.variable} h-full antialiased`}
     >
       <body className="min-h-full bg-[var(--colors-background)] text-[var(--colors-content-primary)]">
         {children}
